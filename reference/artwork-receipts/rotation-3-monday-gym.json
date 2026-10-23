@@ -1,0 +1,11 @@
+{
+  "id": "rotation-3-monday-gym",
+  "date": "2026-10-19",
+  "variant": "gym",
+  "character": "Robin (DC Comics)",
+  "rotationId": "rotation-3-monday",
+  "prompt": "Use case: stylized-concept. Asset type: flat 2D anime wardrobe illustration. Single adult male fashion avatar inspired by Kirito / Sung Jinwoo, dressed in casual real-life clothing inspired by Robin (DC Comics). This is a relatable 172 cm adult with compact natural proportions, 6.5 to 7 heads tall, ordinary length legs, lean average build, NOT a tall elongated runway model. Clearly UPRIGHT SPIKY BLACK HAIR, defined pointed tufts sticking UP, NO floppy fringe. Friendly confident face, simple dark eyes. Exact gym outfit: Relaxed black performance tee; Black training shorts; Supportive training sneakers; A sports watch in the inspiration palette. Signature outfit colors: #2E5A36, #A91B24, #222222, #B59445. All items must be visible and match this formula. Character inspiration belongs in outfit colors and details, not in costumes. Modern casual cool streetwear, never elegant/formal or fantasy armor. Style: simple television-anime character illustration, clean black line art, mostly FLAT SOLID COLOR FILLS, minimal single hard-edged cel shadows, NO gradients, NO painterly detail, NO realistic fabric textures, NO dramatic lighting. Plain solid warm off-white background (#eeece8), no scenery or props. Full body including entire spiky hair and both sneakers, front or gentle three-quarter relaxed standing pose. Vertical portrait, generous margin around the subject, figure fills 75 percent of frame height. No lettering, logos, watermark, weapons, infographic, swatches or collage.",
+  "tool": "built-in image_gen",
+  "source": "/Users/zheref/.codex/generated_images/01a15026-eecf-7853-9638-323a5b584047/exec-d28d6e2b-c7f6-4b6d-8ae9-ac90a618ac6c.png",
+  "generatedAt": "2026-10-18T18:26:53.009Z"
+}

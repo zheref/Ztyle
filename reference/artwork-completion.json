@@ -1,0 +1,12 @@
+{
+  "started": "2026-10-18",
+  "finished": "2026-10-18T18:53:43.097Z",
+  "requestedMissing": 64,
+  "generated": 64,
+  "totalIllustrated": 84,
+  "totalVariants": 84,
+  "style": "172 cm casual avatar; flat anime; solid-color garments; upright spiky hair for warm/gym",
+  "promptSet": "reference/artwork-prompts.json",
+  "assetDirectory": "static/art",
+  "status": "complete"
+}

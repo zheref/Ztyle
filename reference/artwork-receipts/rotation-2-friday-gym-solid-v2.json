@@ -1,0 +1,8 @@
+{
+  "id": "rotation-2-friday-gym",
+  "prompt": "Use case: precise-object-edit. Edit only the shorts in this anime outfit illustration. REMOVE BOTH ORANGE SIDE PANELS on the shorts and replace them with the same plain solid black fabric color as the rest of the shorts. The entire pair of shorts must be plain single-color black, no orange, colored trim, stripe, panel, print or logo anywhere on the shorts. Preserve the shorts' existing seams, folds, length and shape. Keep EVERYTHING ELSE unchanged: red solid-color tee, orange watch strap, black-and-white sneakers, adult male's face, upright spiky black hair, natural compact 172 cm body proportions, pose, line art, flat cel shading, white background and full-body framing.",
+  "source": "/Users/zheref/.codex/generated_images/01a15026-eecf-7853-9638-323a5b584047/exec-67293ab5-05f7-4866-9285-987b023f545f.png",
+  "replacement": true,
+  "tool": "built-in image_gen",
+  "generatedAt": "2026-10-18T18:51:12.649Z"
+}

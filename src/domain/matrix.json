@@ -1,0 +1,282 @@
+[
+  {
+    "week": 1,
+    "day": "Sunday",
+    "name": "Captain America (Marvel)",
+    "snapshot": "Fitted navy blue tactical suit with white chest star, bold red-and-white vertical torso stripes, brown leather harness/utility belt, and dark red boots and gloves.",
+    "palette": "Primary: Navy Blue | Secondary: Clean White | Accent: Crimson Red | Detail: Saddle Brown Leather",
+    "outfit": "Navy blue Harrington jacket or bomber over a crisp white crew-neck tee, dark wash raw denim jeans, classic red retro sneakers (e.g., Nike Cortez or Adidas Gazelle), and a brown leather watch/belt.",
+    "tip": "Keep the blue dark and matte rather than bright royal to ground the look; let red pop only on the footwear or subtle accessory accents.",
+    "rotationId": "rotation-1-sunday"
+  },
+  {
+    "week": 1,
+    "day": "Monday",
+    "name": "Itadori (JJK)",
+    "snapshot": "Dark navy Jujutsu High high-collared uniform jacket with iconic crimson red hooded cowl underneath, matching dark navy trousers, and red-and-white athletic high-tops.",
+    "palette": "Primary: Deep Navy / Black | Contrast: Crimson Red | Accent: White",
+    "outfit": "Crimson red pullover hoodie layered under a cropped dark navy work jacket or overshirt, relaxed navy or black straight-leg trousers, and red-and-white skate/court sneakers (e.g., Nike Dunk Low Chicago).",
+    "tip": "The layered red hood peeking out of a structured dark jacket is Yuji's unmistakable signature silhouette.",
+    "rotationId": "rotation-1-monday"
+  },
+  {
+    "week": 1,
+    "day": "Tuesday",
+    "name": "Inuyasha (Inuyasha)",
+    "snapshot": "Billowing bright scarlet red robe of the fire-rat (haori and wide hakama), crisp white undershirt collar, black beaded prayer necklace, and long silver-white hair.",
+    "palette": "Primary: Scarlet Red | Secondary: Pure White | Accent: Jet Black / Silver",
+    "outfit": "Scarlet red relaxed knit cardigan or overshirt over a crisp white tee, black relaxed pleated trousers, black leather loafers or slip-on shoes, and a subtle black beaded cord necklace.",
+    "tip": "Balance the bold red dominance with clean neutral white and black base pieces so the outfit stays sophisticated.",
+    "rotationId": "rotation-1-tuesday"
+  },
+  {
+    "week": 1,
+    "day": "Wednesday",
+    "name": "Deku (MHA)",
+    "snapshot": "Teal-green hero jumpsuit with black utility lines, white segmented gloves, dark respirator mask, and oversized chunky red high-top combat sneakers with black soles.",
+    "palette": "Primary: Forest / Teal Green | Secondary: Jet Black | Accent: Bright Red | Detail: White",
+    "outfit": "Forest green zip hoodie or chore coat, black graphic tee or white mock neck, black cargo pants, and chunky high-top red sneakers (e.g., Air Jordan 1s or red Converse All Stars).",
+    "tip": "Deku's hallmark is the red sneaker anchor against a dark green/black utilitarian silhouette.",
+    "rotationId": "rotation-1-wednesday"
+  },
+  {
+    "week": 1,
+    "day": "Thursday",
+    "name": "Megumi (JJK)",
+    "snapshot": "Minimalist, clean-cut dark navy high-collared Jujutsu High uniform tunic and tapered trousers, black combat boots, dark spiky hair, and green shadow hound energy.",
+    "palette": "Primary: Midnight Navy | Secondary: Jet Black | Accent: Forest / Olive Green",
+    "outfit": "Dark navy mandarin-collar or stand-collar overshirt, fitted black tee, tailored navy trousers or tapered black pants, and minimalist black Chelsea boots with a dark green beanie or tote.",
+    "tip": "Monochromatic, sleek, utilitarian elegance; keep cuts sharp and tailored to channel his composed, calculating demeanor.",
+    "rotationId": "rotation-1-thursday"
+  },
+  {
+    "week": 1,
+    "day": "Friday",
+    "name": "Tanjiro (KNY)",
+    "snapshot": "Iconic black-and-green checkerboard (ichimatsu) haori over dark brown Demon Slayer Corps gakuran uniform with white calf wraps and hanafuda earrings.",
+    "palette": "Primary: Forest Green | Secondary: Jet Black | Accent: Warm Brown | Detail: Crisp White",
+    "outfit": "Dark green-and-black buffalo check flannel overshirt (or solid forest green cardigan) over a white tee, dark chocolate brown or charcoal chinos, and black leather boots with white socks peeking out.",
+    "tip": "An oversized green-and-black check flannel is an effortless, stylish everyday nod to Tanjiro's haori.",
+    "rotationId": "rotation-1-friday"
+  },
+  {
+    "week": 1,
+    "day": "Saturday",
+    "name": "Tomioka (KMY)",
+    "snapshot": "Split half-and-half haori: solid dark wine/crimson red on the right, geometric green/yellow/orange cubes on the left, over dark brown uniform and white leg wraps.",
+    "palette": "Primary: Deep Wine / Crimson Red | Contrast: Forest Green | Accent: Mustard Yellow | Neutral: White / Black",
+    "outfit": "Deep wine/burgundy crew-neck sweater or bomber jacket, paired with a green-and-yellow geometric patterned scarf or mustard beanie, dark charcoal trousers, and clean white minimalist sneakers.",
+    "tip": "Instead of literal split clothing, wear a solid burgundy top and incorporate mustard yellow and green through subtle accessories.",
+    "rotationId": "rotation-1-saturday"
+  },
+  {
+    "week": 2,
+    "day": "Sunday",
+    "name": "Archer (Fate)",
+    "snapshot": "Sleek black sleeveless compression undershirt and black combat trousers wrapped in a distinctive open crimson red holy shroud trench coat with metallic silver buckles.",
+    "palette": "Primary: Jet Black | Contrast: Crimson Red | Accent: Metallic Silver / White",
+    "outfit": "Black ribbed mock-neck sweater or fitted tee, black slim-fit denim or moto pants, a crimson red long trench coat, wool overcoat, or red chore jacket, finished with black combat boots and silver jewelry.",
+    "tip": "Let the crimson red outerwear be the dramatic statement piece over a sleek, all-black tailored foundation.",
+    "rotationId": "rotation-2-sunday"
+  },
+  {
+    "week": 2,
+    "day": "Monday",
+    "name": "Gon (HxH)",
+    "snapshot": "Bright green zip-up jacket with contrast orange collar/hem piping, matching green short-shorts, black tank undershirt, and green/black laced boots.",
+    "palette": "Primary: Kelly / Forest Green | Accent: Bright Orange | Base: Black / White",
+    "outfit": "Forest green sporty track jacket or zip windbreaker with orange zip/piping details, black cargo shorts or black relaxed denim, and green-and-orange retro runners (e.g., Le Coq Sportif or Asics Gel-Lyte).",
+    "tip": "Lean into retro 90s streetwear / gorpcore aesthetics; keep the green sporty and balance with muted black pants.",
+    "rotationId": "rotation-2-monday"
+  },
+  {
+    "week": 2,
+    "day": "Tuesday",
+    "name": "Rengoku (KNY)",
+    "snapshot": "White haori flaring into fiery red-and-yellow jagged flame ridges along the hem, dark brown Demon Slayer uniform, and flame-patterned calf guards.",
+    "palette": "Primary: Warm White | Secondary: Flame Orange / Golden Yellow | Accent: Deep Crimson Red | Base: Charcoal",
+    "outfit": "Off-white/cream textured knit sweater or worker jacket, paired with a warm rust/burnt orange scarf or beanie, dark brown/charcoal trousers, and warm tan or oxblood leather boots.",
+    "tip": "Use warm autumnal shades (cream, rust, mustard, burgundy) to capture his blazing fiery spirit with high-end, cozy elegance.",
+    "rotationId": "rotation-2-tuesday"
+  },
+  {
+    "week": 2,
+    "day": "Wednesday",
+    "name": "Naruto (Naruto)",
+    "snapshot": "Bright orange two-tone tracksuit jacket with royal blue shoulders and white shearling-lined collar, matching baggy orange pants, and blue shinobi sandals.",
+    "palette": "Primary: Vivid Orange | Contrast: Royal Blue | Accent: Clean White",
+    "outfit": "Royal blue corduroy or denim jacket over an orange graphic tee (or orange hoodie under a navy denim jacket), white relaxed carpenter pants or dark blue jeans, and blue-and-white sneakers.",
+    "tip": "Navy or royal blue denim softens the bright orange top, keeping the iconic colorway balanced and wearable for daily life.",
+    "rotationId": "rotation-2-wednesday"
+  },
+  {
+    "week": 2,
+    "day": "Thursday",
+    "name": "Naruto (Naruto Shippuden)",
+    "snapshot": "Mature black-and-orange zip tracksuit jacket with broad black shoulders/chest bands, matching orange pants with black holster bandage, and black shinobi sandals.",
+    "palette": "Primary: Jet Black | Contrast: Vibrant Orange | Accent: White",
+    "outfit": "Black fleece or track jacket with bold orange color-blocking, black relaxed cargo pants or joggers, and black-and-orange sneakers (e.g., Nike Air Max or Jordan 1 Shattered Backboard).",
+    "tip": "Black takes the dominant role here with orange as the powerful accent panel, giving an edgy, modern athletic look.",
+    "rotationId": "rotation-2-thursday"
+  },
+  {
+    "week": 2,
+    "day": "Friday",
+    "name": "Naruto Sage (Naruto)",
+    "snapshot": "Shippuden black-and-orange suit overlaid with an iconic long sleeveless crimson red-and-black flame-bordered Sage haori cloak and giant tan scroll on back.",
+    "palette": "Primary: Crimson Red | Secondary: Jet Black | Accent: Orange | Detail: Ochre / Tan",
+    "outfit": "Crimson red long duster coat or kimono-style noragi cardigan over an all-black tee and black denim, accented with an orange beanie or watch and tan canvas backpack/messenger bag.",
+    "tip": "The long red coat over an all-black base instantly evokes the epic Sage mode silhouette.",
+    "rotationId": "rotation-2-friday"
+  },
+  {
+    "week": 2,
+    "day": "Saturday",
+    "name": "Alice (SAO)",
+    "snapshot": "Gleaming golden knight plate armor, rich royal blue capes/skirts, white lace undergarments, and braided golden-blonde hair.",
+    "palette": "Primary: Royal Blue | Contrast: Pure White | Accent: Metallic Gold / Brass",
+    "outfit": "Royal blue structured blazer or tailored wool trench, crisp white button-down shirt, cream or white tailored trousers, polished brown/gold-buckled loafers, and gold jewelry accents.",
+    "tip": "Crisp, regal tailoring; gold accessories (watches, belt buckles, jewelry) evoke knightly prestige against royal blue.",
+    "rotationId": "rotation-2-saturday"
+  },
+  {
+    "week": 3,
+    "day": "Sunday",
+    "name": "Ironman (Marvel)",
+    "snapshot": "Crimson and metallic hot-rod gold biomechanical armor with glowing cyan/white arc reactor on chest, or Tony's tailored suit with tinted shades.",
+    "palette": "Primary: Crimson / Cherry Red | Contrast: Metallic Gold / Brass | Base: Black / Beige | Accent: Ice Cyan",
+    "outfit": "Deep crimson red fitted tee or knit sweater, tailored beige/camel chinos, black leather bomber jacket, gold watch/cuff, and sleek sneakers with subtle blue accents.",
+    "tip": "High-tech billionaire casual: sleek leather, warm camel pants, cherry red statement knit, and sharp gold metallic hardware.",
+    "rotationId": "rotation-3-sunday"
+  },
+  {
+    "week": 3,
+    "day": "Monday",
+    "name": "Robin (DC Comics)",
+    "snapshot": "Bright red reinforced tunic/vest, forest green sleeves/gloves and pants, bright yellow utility belt and cape lining, and black domino mask.",
+    "palette": "Primary: Forest Green | Contrast: Scarlet / Crimson Red | Accent: Golden Yellow | Base: Jet Black",
+    "outfit": "Olive/forest green utility field jacket or cargo pants, paired with a washed red graphic tee or crimson hoodie, black leather boots, and subtle yellow/brass brass-toned hardware.",
+    "tip": "Muted olive/army green grounds vibrant crimson red, turning an acrobatic superhero suit into rugged military/workwear street style.",
+    "rotationId": "rotation-3-monday"
+  },
+  {
+    "week": 3,
+    "day": "Tuesday",
+    "name": "Survey Corps - Eren / Levi (Attack on Titan)",
+    "snapshot": "Deep hooded forest green Survey Corps cape featuring the \"Wings of Freedom\" crest, crisp white button-up collar shirt, beige/tan cropped leather jacket, white riding trousers, and knee-high dark brown boots.",
+    "palette": "Primary: Forest Green | Secondary: Pure White | Neutral: Tan / Leather Brown | Accent: Steel Grey",
+    "outfit": "Forest green hooded parka or long military coat over a crisp white grandad-collar shirt, off-white/cream straight-leg trousers, and dark brown leather lace-up boots.",
+    "tip": "The crisp white shirt and cream trousers paired with military green outerwear captures the refined Scouting Legion aesthetic.",
+    "rotationId": "rotation-3-tuesday"
+  },
+  {
+    "week": 3,
+    "day": "Wednesday",
+    "name": "Black Star (Soul Eater)",
+    "snapshot": "Sleeveless black sleeveless turtleneck tunic with a large white star shoulder tattoo, white baggy hakama-style ninja pants with black knee straps, and bright electric blue spiky hair.",
+    "palette": "Primary: Electric / Cyan Blue | Secondary: Pure White | Base: Jet Black",
+    "outfit": "Electric cyan or sky blue crew-neck sweatshirt over a white tee, relaxed black cargo pants with strap details, clean white skate sneakers, and a black canvas belt.",
+    "tip": "Athleisure meets 2000s techwear; use bold cyan blue accents to channel Black☆Star's exuberant ninja star power.",
+    "rotationId": "rotation-3-wednesday"
+  },
+  {
+    "week": 3,
+    "day": "Thursday",
+    "name": "Natsu (Fairy Tail)",
+    "snapshot": "One-sleeved black open vest with gold trim, baggy white knee-length pants tied with a black sash, Igneel's signature white scale-pattern scarf, and salmon-pink spiky hair.",
+    "palette": "Primary: Jet Black | Contrast: Warm White | Accent: Golden Yellow | Pop: Coral / Salmon Pink",
+    "outfit": "Black overshirt or open utility vest with gold snap buttons, white waffle-knit tee or white textured scarf, white or off-white relaxed trousers, black sandals or sneakers, and salmon-pink socks or cap.",
+    "tip": "A textured white waffle scarf against an open black jacket is the quintessential, modern nod to Natsu's dragon-scale scarf.",
+    "rotationId": "rotation-3-thursday"
+  },
+  {
+    "week": 3,
+    "day": "Friday",
+    "name": "Batman (DC Comics)",
+    "snapshot": "Stealth matte-black armored cowl, cape, and gauntlets over dark charcoal/slate ballistic torso suit, prominent black bat insignia on chest, and gold/bronze utility belt.",
+    "palette": "Primary: Pitch Black | Secondary: Charcoal Grey | Accent: Antique Brass / Gold",
+    "outfit": "Charcoal grey crew-neck cashmere sweater under a matte black leather moto jacket (or tech trench), tailored black slim-fit denim, black Chelsea boots, and a brass/gold buckle leather belt.",
+    "tip": "Ultimate urban stealth minimalism: layer varied dark textures (leather, cashmere, denim) with a solitary brass belt/watch accent.",
+    "rotationId": "rotation-3-friday"
+  },
+  {
+    "week": 3,
+    "day": "Saturday",
+    "name": "Ichigo (Bleach)",
+    "snapshot": "Slim full-length black shihakusho longcoat with jagged hem and bright crimson red inner silk lining, black chain tsuba, hollow mask white accents, and fiery orange hair.",
+    "palette": "Primary: Jet Black | Contrast: Crimson Red | Accent: Bone White | Hair: Burnt Orange",
+    "outfit": "All-black outfit (black tee, black slim trousers) anchored by a black trench coat or chore jacket featuring a red inner lining (or subtle red contrast stitching), and white high-top sneakers.",
+    "tip": "Bankai chic: keep the exterior sleek and monochrome black, with red revealed dynamically as you move or layer.",
+    "rotationId": "rotation-3-saturday"
+  },
+  {
+    "week": 4,
+    "day": "Sunday",
+    "name": "Seshomaru (Inuyasha)",
+    "snapshot": "Flowing pure white kimono robe adorned with red plum blossom crests, purple decorative shoulder ribbons, massive white fur moko-moko over shoulder, spiked steel armor pauldron, and gold crescent crest.",
+    "palette": "Primary: Pristine White | Secondary: Soft Cream / Silver | Accent: Royal Purple / Crimson Red | Detail: Pale Gold",
+    "outfit": "Oversized creamy white wool/fleece coat or oversized white knit cardigan, white relaxed trousers, paired with a rich purple silk scarf or purple crewneck tee, white leather sneakers, and gold jewelry.",
+    "tip": "Luxurious white textures (shearling, mohair, or wool) evoke his fur sash, elevated by royal purple and crimson accents.",
+    "rotationId": "rotation-4-sunday"
+  },
+  {
+    "week": 4,
+    "day": "Monday",
+    "name": "Kaneki (Tokyo Ghoul)",
+    "snapshot": "Form-fitting black leather ghoul combat suit with spine/chest cutouts, metallic zipper gimp mask, stark white hair, and vivid crimson kakugan eye / kagune tentacles.",
+    "palette": "Primary: Jet Black | Secondary: Stark White | Accent: Deep Plum / Purple | Pop: Blood Red",
+    "outfit": "Black leather moto jacket (or black zip-up tech jacket) over a crisp white tee, charcoal/black ripped or panelled denim, black combat boots, and deep plum/burgundy socks or red eyewear.",
+    "tip": "Dark avant-garde Tokyo streetwear; combine clean monochromatic black-and-white contrast with edgy zipper and hardware details.",
+    "rotationId": "rotation-4-monday"
+  },
+  {
+    "week": 4,
+    "day": "Tuesday",
+    "name": "Sasuke (Naruto)",
+    "snapshot": "High-collared loose white short-sleeved tunic open at the chest, dark blue trousers, wrapped at the waist with an oversized thick braided purple shimenawa rope holding his kusanagi sword.",
+    "palette": "Primary: Crisp White | Secondary: Deep Navy Blue | Accent: Royal Purple | Detail: Black",
+    "outfit": "Relaxed off-white camp-collar or open linen shirt, deep navy tailored trousers or dark blue jeans, a purple braided woven belt or purple bandana, and minimalist dark slip-ons or sneakers.",
+    "tip": "The purple rope belt translates effortlessly into a modern woven belt or statement rope accessory against an airy white top and navy pants.",
+    "rotationId": "rotation-4-tuesday"
+  },
+  {
+    "week": 4,
+    "day": "Wednesday",
+    "name": "Yuta (JJK)",
+    "snapshot": "Loose, unstructured pure white Jujutsu High uniform jacket buttoned diagonally, dark navy uniform trousers, white sneakers, and dark katana sheath strap across chest.",
+    "palette": "Primary: Clean White | Secondary: Deep Navy | Base: Black | Accent: Subtle Crimson",
+    "outfit": "Boxy white utility work jacket or white denim overshirt over a white tee, relaxed navy pleated trousers, clean white leather retro sneakers, and a black cross-body sling bag.",
+    "tip": "Effortless, clean-cut modern minimalism; the cross-body bag strap mirrors his sword sheath while white outerwear keeps it fresh.",
+    "rotationId": "rotation-4-wednesday"
+  },
+  {
+    "week": 4,
+    "day": "Thursday",
+    "name": "Kirito (SAO)",
+    "snapshot": "Floor-length jet black leather trench coat (\"Coat of Midnight\") with silver/white linear trim along the collar and hem, black leather chest harness, black trousers, and double sword scabbards.",
+    "palette": "Primary: Pitch Black | Contrast: Silver / Stark White | Neutral: Charcoal",
+    "outfit": "Long black duster coat or black car coat over a black mock-neck sweater, slim black jeans, black leather Chelsea boots, and silver metallic chain or minimalist silver watch.",
+    "tip": "Monochromatic black tailored layering with intentional silver metallic hardware creates a sleek, futuristic modern silhouette.",
+    "rotationId": "rotation-4-thursday"
+  },
+  {
+    "week": 4,
+    "day": "Friday",
+    "name": "Roy Mustang (FMA)",
+    "snapshot": "Tailored double-breasted Amestris military officer uniform in deep royal blue with gold shoulder ropes and rank epaulets, white ignition gloves with transmutation circles, and tall black riding boots.",
+    "palette": "Primary: Amestris Royal / Navy Blue | Contrast: Pure White | Base: Jet Black | Accent: Gold / Brass",
+    "outfit": "Navy double-breasted tailored coat or navy peacoat over a crisp white dress shirt, tailored navy or black trousers, polished black dress shoes, white pocket square, and gold cufflinks/belt buckle.",
+    "tip": "Classic sartorial elegance; military-inspired tailoring with brass/gold buttons and white accents channels the commanding Flame Alchemist.",
+    "rotationId": "rotation-4-friday"
+  },
+  {
+    "week": 4,
+    "day": "Saturday",
+    "name": "Sung JinWoo (Solo Leveling)",
+    "snapshot": "Long fluttering midnight-black trench coat with high collar, dark navy/black fitted tactical undershirt and combat trousers, radiating glowing neon purple and ice-blue shadow monarch aura.",
+    "palette": "Primary: Obsidian Black | Secondary: Midnight Navy | Accent: Neon Purple / Electric Cyan",
+    "outfit": "Long black wool overcoat or techwear trench, black slim-fit turtleneck, dark navy/black tapered trousers, black tactical boots, and subtle neon purple or cyan watch display / accessory accents.",
+    "tip": "Dark, imposing \"Shadow Monarch\" drip; sleek tailored outerwear over an all-black base, energized with high-tech purple or electric blue accents.",
+    "rotationId": "rotation-4-saturday"
+  }
+]

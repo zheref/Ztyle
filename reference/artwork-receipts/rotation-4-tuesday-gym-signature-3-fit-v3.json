@@ -1,0 +1,16 @@
+{
+  "id": "rotation-4-tuesday-gym-signature-3",
+  "character": "Sasuke",
+  "rotationId": "rotation-4-tuesday",
+  "variant": "gym",
+  "option": 3,
+  "annotated": true,
+  "replacement": true,
+  "revision": 3,
+  "revisionReason": "Make the third gym option visibly distinct through sleeve coverage",
+  "reference": "/Users/zheref/Code/GatsbyJS/ztyle/static/art/rotation-4-tuesday-gym-signature-3-anime-full.webp",
+  "prompt": "Edit this existing anime wardrobe style guide. Change ONLY the training top to Plain white lightweight long-sleeve performance crewneck top, relaxed fit. The sleeves must be full length to the wrists, with a relaxed breathable athletic fit and the watch still visible at the cuff. Keep the top exactly the same single solid character-inspired color as before. Update EVERY top-description label and top detail/branding sketch to show and describe the long sleeves; replace short-sleeve, sleeveless and muscle-tee wording with \"LIGHTWEIGHT LONG-SLEEVE PERFORMANCE TOP\". Preserve the adult male face, 172 cm compact proportions, upright spiky BLACK hair, pose, shorts, shoes, watch color, character title, palette legend, all other callouts, and the existing whole-page layout. Keep the plain casual clothes, flat 2D anime linework and minimal cel shading. No added logos, color panels, stripes or gradients. Keep the complete shoes and hair visible. ",
+  "source": "/Users/zheref/.codex/generated_images/01a15026-eecf-7853-9638-323a5b584047/exec-e30c26ab-24cd-4ba7-9083-095f25630547.png",
+  "tool": "built-in image_gen",
+  "generatedAt": "2026-10-20T16:43:58.671Z"
+}
