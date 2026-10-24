@@ -16,7 +16,9 @@
 # visible, and the merge stays a human (or maintainer-delegated) decision.
 #
 # Settled means all of:
-#   1. a `## Adversarial review (hanten)` section exists;
+#   1. an `## Adversarial review (hanten)` section exists -- or a `###` one, so
+#      it can sit inside Hatsu's Completion checklist, whose PR-sections guard
+#      admits no undeclared level-2 heading;
 #   2. every row of its findings table — any table in the section whose header
 #      has a `disposition` column, bold or not — carries a disposition that is
 #      exactly `fixed`, `pushed-back` or `deferred` followed by its reason
@@ -53,13 +55,13 @@ fi
 fail=0
 flag() { echo "::error::hanten: $1"; fail=1; }
 
-if ! grep -qE '^## Adversarial review \(hanten\)' <<<"$body"; then
+if ! grep -qE '^###? Adversarial review \(hanten\)' <<<"$body"; then
     flag "no '## Adversarial review (hanten)' section in the body"
 fi
 
-# The hanten section: from its heading to the next `## ` heading.
+# The hanten section: from its heading to the next heading of level 1-3.
 section=$(awk '
-    /^## / { inside = ($0 ~ /^## Adversarial review \(hanten\)/); next }
+    /^#{1,3} / { inside = ($0 ~ /^###? Adversarial review \(hanten\)/); next }
     inside { sub(/^[ \t]+/, ""); print }
 ' <<<"$body")
 
