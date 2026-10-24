@@ -1,0 +1,30 @@
+{
+  "$comment": "Issue-routing registry for zheref/Ztyle (this product repository) and the tool repositories it consumes. Authored at Hatsu adoption on 2026-10-22 from the owner's answers: kind product, role consumer, gate G2 (the maintainer's ruling of 2026-09-18 that the gate is the repository's role, not the file's kind). No remote existed at adoption; at bootstrap on 2026-10-23 the slug was set to GitHub's canonical case, zheref/Ztyle (public). `product_codes` carries no nested `$comment`: nen's repos loader reads every key of that map as a code.",
+  "consumers": [
+    {
+      "repo": "zheref/Ztyle",
+      "role": "Ztyle, a Gatsby wardrobe planner -- the product this registry belongs to",
+      "kind": "product",
+      "gate": "G2",
+      "consumes": [
+        "zheref/hatsu",
+        "zheref/nen"
+      ]
+    }
+  ],
+  "maintained_tools": [
+    {
+      "repo": "zheref/hatsu",
+      "role": "Hatsu workflow and skill prose"
+    },
+    {
+      "repo": "zheref/nen",
+      "role": "Shared deterministic machinery"
+    }
+  ],
+  "product_codes": {
+    "ZTY": "zheref/Ztyle",
+    "HA": "zheref/hatsu",
+    "NN": "zheref/nen"
+  }
+}

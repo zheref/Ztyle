@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "$comment": "zheref/Ztyle's reviewer identities, as DATA, so `nen pr ready` can decide CON-32 readiness here instead of refusing. Authored at Hatsu adoption on 2026-10-22 from the owner's choice: the `hanten` review round AS A CHECK, modelled on zheref/KroApple's shape (maintainer ruling 2026-10-05 there). No AI bot round is waited on. `nen pr ready` counts a SUCCESS of the `hanten` check -- the job of .github/workflows/hanten.yml, which runs ci_scripts/hanten_gate.sh against the pull request body -- as the round. The check attests the BODY, not the review: whoever can edit the body can write a passing section; the check makes an unsettled or missing review visible, and the merge stays a human decision. Nothing here was read off live pull requests, because the repository had none at adoption; revisit the delivery block once real PRs exist.",
+  "reviewers": [
+    {
+      "$comment": "The hanten round as a check. The login pattern is anchored to a name no reviewer posts under: the check is the round, never a review.",
+      "name": "hanten",
+      "login_pattern": { "pattern": "^hanten$", "ignoreCase": true },
+      "round_check_pattern": { "pattern": "^hanten$", "ignoreCase": true }
+    }
+  ],
+  "$approval": "POLICY. `review-round-only` with no default approvers, as in zheref/hatsu's own gates.json and the maintainer's ruling of 2026-09-12: the declared round is the review, a separate APPROVED review is not required, and the human merge decision stays outside the automated verdict. DELETING `approval_policy` makes the loader refuse the empty approval set; it is load-bearing.",
+  "approval_policy": "review-round-only",
+  "$approval_policy": "one of: required | review-round-only",
+  "default_approvers": [],
+  "base_reviewers": ["hanten"],
+  "delivery": {
+    "$comment": "What a delivery pull request looks like here: opened by the maintainer on their own credentials from a Hatsu branch. The branch template in nen/workflow.json is {model}/{persona}/{descriptor}, so the head prefix is the surface's model token.",
+    "author_pattern": { "pattern": "^zheref$", "ignoreCase": true },
+    "head_ref_prefixes": ["claude/", "codex/", "cursor/"],
+    "labels": []
+  },
+  "checks": {
+    "$comment": "A maintainer's ruling that a named check is not watched goes here, never a chat line or a hand-passed --exclude-check. Read at the pull request's BASE. An empty list is a decision: nothing is excluded.",
+    "excluded": []
+  },
+  "round_quorum": {
+    "$comment": "At least `minimum` of `any_of` must have a round. This group is hanten alone; a met quorum fulfils the owed round of an unavailable member.",
+    "any_of": ["hanten"],
+    "minimum": 1
+  },
+  "round_policy": {
+    "$comment": "stallMinutes: a pending review request older than this reads not-ready (reviewer round stalled). minRounds / maxRounds: the reviewer-round floor and ceiling, as Hatsu's contracts/round_policy.default.json states them.",
+    "stallMinutes": 30,
+    "minRounds": 1,
+    "maxRounds": 3
+  }
+}
