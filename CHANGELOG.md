@@ -4,4 +4,4 @@ All notable changes to Ztyle are recorded here. `nen changelog collate` anchors 
 
 ### Unreleased
 
-- Adopt Hatsu: nen/ declarations, taxonomy seeds, readiness and hanten workflows.
+- Adopt Hatsu: nen/ declarations, taxonomy seeds, `nen shu` CI, readiness and hanten workflows, and a `test:report` script that writes JUnit and lcov.

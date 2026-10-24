@@ -8,6 +8,9 @@
 # when the pull request body records a settled hanten review and fails when it
 # does not. `nen pr ready` counts a SUCCESS of the `hanten` check as the round.
 #
+# Copied from a sibling consumer repository; the credits history above is its, and
+# Ztyle adopted hanten-as-check from the start (nen/gates.json).
+#
 # WHAT IT ATTESTS: the body, not the review. Whoever can edit the body can
 # write a passing section; the check makes an unsettled or missing review
 # visible, and the merge stays a human (or maintainer-delegated) decision.

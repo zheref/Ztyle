@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "$comment": "zheref/Ztyle's reviewer identities, as DATA, so `nen pr ready` can decide CON-32 readiness here instead of refusing. Authored at Hatsu adoption on 2026-10-22 from the owner's choice: the `hanten` review round AS A CHECK, modelled on zheref/KroApple's shape (maintainer ruling 2026-10-05 there). No AI bot round is waited on. `nen pr ready` counts a SUCCESS of the `hanten` check -- the job of .github/workflows/hanten.yml, which runs ci_scripts/hanten_gate.sh against the pull request body -- as the round. The check attests the BODY, not the review: whoever can edit the body can write a passing section; the check makes an unsettled or missing review visible, and the merge stays a human decision. Nothing here was read off live pull requests, because the repository had none at adoption; revisit the delivery block once real PRs exist.",
+  "$comment": "zheref/Ztyle's reviewer identities, as DATA, so `nen pr ready` can decide CON-32 readiness here instead of refusing. Authored at Hatsu adoption on 2026-10-22 from the owner's choice: the `hanten` review round AS A CHECK, modelled on a sibling consumer repository's shape (maintainer ruling 2026-10-05 there). No AI bot round is waited on. `nen pr ready` counts a SUCCESS of the `hanten` check -- the job of .github/workflows/hanten.yml, which runs ci_scripts/hanten_gate.sh against the pull request body -- as the round. The check attests the BODY, not the review: whoever can edit the body can write a passing section; the check makes an unsettled or missing review visible, and the merge stays a human decision. Nothing here was read off live pull requests, because the repository had none at adoption; revisit the delivery block once real PRs exist.",
   "reviewers": [
     {
-      "$comment": "The hanten round as a check. The login pattern is anchored to a name no reviewer posts under: the check is the round, never a review.",
+      "$comment": "The hanten round as a check. The login pattern contains a space, which no GitHub login can (logins are letters, digits and hyphens): a real account named Hanten exists, so `^hanten$` would let a stranger's review count as the round. The check is the round, never a review.",
       "name": "hanten",
-      "login_pattern": { "pattern": "^hanten$", "ignoreCase": true },
+      "login_pattern": { "pattern": "^hanten round$", "ignoreCase": true },
       "round_check_pattern": { "pattern": "^hanten$", "ignoreCase": true }
     }
   ],
@@ -14,6 +14,7 @@
   "$approval_policy": "one of: required | review-round-only",
   "default_approvers": [],
   "base_reviewers": ["hanten"],
+  "$base_reviewers": "Kept: nen refuses an empty base set (nothing would owe a round). `hanten` names the CHECK round, not a requestable GitHub account -- never pass it to `nen pr request-reviews`.",
   "delivery": {
     "$comment": "What a delivery pull request looks like here: opened by the maintainer on their own credentials from a Hatsu branch. The branch template in nen/workflow.json is {model}/{persona}/{descriptor}, so the head prefix is the surface's model token.",
     "author_pattern": { "pattern": "^zheref$", "ignoreCase": true },

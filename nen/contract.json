@@ -63,7 +63,7 @@
           "artifacts": [
             ".nen/coverage/lcov.info"
           ],
-          "why": "Node's built-in test coverage (`--experimental-test-coverage`, lcov reporter) over the same node:test run as `test` -- no extra dependency. Scope is what the suites load: src/domain/*.cjs and the server scripts. Set at Hatsu bootstrap, 2026-10-23."
+          "why": "Node's built-in test coverage (`--experimental-test-coverage`, lcov reporter) over the same node:test run as `test` -- no extra dependency. Scope is the modules the suites require in-process: src/domain/*.cjs; scripts/serve.cjs runs as a spawned child and is not measured. Set at Hatsu bootstrap, 2026-10-23."
         }
       }
     },
@@ -79,14 +79,14 @@
     "$kind": "one of: product | process | library",
     "toolchain": {
       "node": {
-        "version": ">=18.0.0",
+        "version": ">=22.0.0",
         "probe": [
           "node",
           "--version"
         ],
         "versionFrom": "first-semver-on-stdout",
         "installer": "verify-only",
-        "why": "Gatsby 5 declares engines.node >=18.0.0 <26; node:test (the test verb) also needs 18+. Verify-only: nen reports the host's node and never installs one."
+        "why": "Gatsby 5 declares engines.node >=18.0.0 <26, but the test verb sets the real floor: `test:report` uses the node:test lcov reporter (first in 20.11.0/21.2.0) and win32 relies on `node --test` expanding its own glob (21+), so 22 -- the version CI pins -- is declared. Verify-only: nen reports the host's node and never installs one."
       }
     },
     "preconditions": {

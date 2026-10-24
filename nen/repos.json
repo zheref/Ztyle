@@ -1,11 +1,12 @@
 {
-  "$comment": "Issue-routing registry for zheref/Ztyle (this product repository) and the tool repositories it consumes. Authored at Hatsu adoption on 2026-10-22 from the owner's answers: kind product, role consumer, gate G2 (the maintainer's ruling of 2026-09-18 that the gate is the repository's role, not the file's kind). No remote existed at adoption; at bootstrap on 2026-10-23 the slug was set to GitHub's canonical case, zheref/Ztyle (public). `product_codes` carries no nested `$comment`: nen's repos loader reads every key of that map as a code.",
+  "$comment": "Issue-routing registry for zheref/Ztyle (this product repository) and the tool repositories it consumes. Authored at Hatsu adoption on 2026-10-22 from the owner's answers: kind product, role consumer, gate G2 (the maintainer's ruling of 2026-09-18 that the gate is the repository's role, not the file's kind). No remote existed at adoption; at bootstrap on 2026-10-23 the slug was set to GitHub's canonical case, zheref/Ztyle (public), and the pins set to the latest released tags (Hatsu v0.130.0, bankai-handbooks v0.11.0, nen v0.26.0). The consumer row carries no `scenario` on purpose: bankai-handbooks v0.11.0 has no Gatsby/static-React scenario, so no stack handbook resolves and stack-prefixed checks stay unread until the owner rules whether react-uzf-v1 governs it or a scenario is added (a G4 handbook-question). `product_codes` carries no nested `$comment`: nen's repos loader reads every key of that map as a code.",
   "consumers": [
     {
       "repo": "zheref/Ztyle",
       "role": "Ztyle, a Gatsby wardrobe planner -- the product this registry belongs to",
       "kind": "product",
       "gate": "G2",
+      "pinned": "v0.130.0",
       "consumes": [
         "zheref/hatsu",
         "zheref/nen"
@@ -19,7 +20,13 @@
     },
     {
       "repo": "zheref/nen",
-      "role": "Shared deterministic machinery"
+      "role": "Shared deterministic machinery",
+      "pinned": "v0.26.0"
+    },
+    {
+      "repo": "zheref/bankai-handbooks",
+      "role": "Canonical handbooks and constitution (CON-13) -- read at this pin; port.handbooksRepo names it",
+      "pinned": "v0.11.0"
     }
   ],
   "product_codes": {
