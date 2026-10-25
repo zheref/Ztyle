@@ -1,0 +1,314 @@
+{
+  "$schema": "nen.workflow/v0.1",
+  "$comment": "Written by `nen scaffold init`. This file is POLICY -- what the delivery loop's parameters are. What nen EXECUTES lives in nen/contract.json. Every key here is optional and carries the default nen applies when it is absent; delete anything you do not want to state. `nen schema check` validates it.",
+  "branch": {
+    "template": "{model}/{persona}/{descriptor}",
+    "base": "main"
+  },
+  "iteration": {
+    "checks": [
+      "build"
+    ],
+    "lane": "gatsby"
+  },
+  "tests": {
+    "required": [
+      "test"
+    ],
+    "extra": []
+  },
+  "coverage": {
+    "minimum": 80,
+    "recommended": 85,
+    "ideal": 90,
+    "scope": "touched"
+  },
+  "launch": {
+    "default": null,
+    "fallback": null
+  },
+  "deploy": {
+    "$comment": "defaultTarget names the project.targets key a caller's own tooling sends to when told no target; it must be declared \"nonProduction\": true. null means ask. nen shu deploy never reads it and still requires --target.",
+    "defaultTarget": null
+  },
+  "reports": {
+    "dir": "Reports",
+    "retain": "final-only",
+    "template": "rikugan",
+    "$template": "one of: spiritual-message | rikugan",
+    "captures": "Reports/captures",
+    "sections": {"$comment":"Which blocks each report variant renders, read by nen report render --variant; with none declared the verb refuses every variant. Copied from zheref/hatsu's own declaration at adoption so both repositories render the same blocks in the same order. Block NAMES are configuration; every value inside a block is model-written.","turn":{"template":"spiritual-message","blocks":["masthead","tally","desk","lastTurn","landed","delta","evidence","launch","decisions"]},"turn-fast":{"template":"spiritual-message","blocks":["masthead","tally","desk","lastTurn"]},"landing":{"template":"spiritual-message","blocks":["masthead","tally","desk","lastTurn","landed","delta","evidence","spend","launch","decisions","prBody"]},"final":{"template":"rikugan","blocks":["masthead","tally","desk","register","spend","legend"]},"register":{"template":"rikugan","blocks":["masthead","tally","desk","register","spend","legend"]}}
+  },
+  "notifications": {
+    "$comment": "turn decides how loud an ORDINARY (no-gate) turn is: 'rung1' rings only the first rung 'rungs' lists, 'all' rings every rung 'rungs' lists on every turn -- a gate always rings everything 'rungs' lists regardless.",
+    "rungs": [
+      "push",
+      "os",
+      "sound"
+    ],
+    "$rungs": "any of: push | os | sound",
+    "sound": "Glass",
+    "turn": "rung1",
+    "$turn": "one of: rung1 | all"
+  },
+  "commits": {
+    "$comment": "Hatsu-Agent (a local-plane agent, working on a human's own credentials) and Akatsuki-Agent (an autonomous CI-plane agent) are the two conventional provenance-trailer keys this project's family uses -- never an AI-authorship claim. nen ships neither as a default: this list stays empty until a repository states which of the two (or both) it admits, e.g. [\"Hatsu-Agent\", \"Akatsuki-Agent\"]. `nen scaffold init`'s own --agent-trailer defaults to Akatsuki-Agent and writes its resolved key here for you. runTrailer is a SEPARATE, OPTIONAL key, e.g. \"Akatsuki-Run\" -- absent (null) by default, and never itself an attribution trailer: it names which RUN produced a commit, not who or what did, so it never belongs in the list above. Set it (--run-trailer, then re-run 'nen scaffold init' to regenerate the hook) only if this repository also wants a run identifier required on every automated commit.",
+    "allowedAttributionTrailers": [
+      "Hatsu-Agent"
+    ],
+    "forbiddenTrailers": [],
+    "runTrailer": null
+  },
+  "monitor": {
+    "maxCycles": 20,
+    "pollSeconds": 300,
+    "localSlotFrees": "merged"
+  },
+  "models": {
+    "$comment": "An open map at both levels: a surface is whatever you call it, a tier likewise. nen validates that every leaf is a string and reads nothing else -- these aliases are for whoever asks the question, not for nen.",
+    "rule": "latest alias only, never a version; subagents never on the frontier tier",
+    "claude": {
+      "frontier": "fable",
+      "deep": "opus",
+      "fast": "sonnet",
+      "economy": "haiku"
+    },
+    "codex": {
+      "frontier": "astra",
+      "deep": "sol",
+      "fast": "terra",
+      "economy": "luna"
+    },
+    "cursor": {
+      "frontier": "grok",
+      "deep": "grok",
+      "fast": "composer",
+      "economy": "composer",
+      "note": "surface-native aliases only; provider models on this surface are reserved for its own review bot"
+    },
+    "roles": {
+      "reviewer": "deep",
+      "worker": "fast",
+      "measurer": "fast",
+      "orchestrator": "frontier"
+    }
+  },
+  "review": {"$comment":"Which reviewer hanten raises for a diff and how many times per effort. Paths use the prefix/glob grammar nen report data --tiers reads; a path no scope claims is reported unclaimed. Tiers name this file's own models rungs, never frontier. Product set chosen at adoption on 2026-10-22, modelled on zheref/hatsu's declaration and adapted to this Gatsby site's layout.","scopes":{"code":{"persona":"nobunaga","tier":"deep","budget":2,"paths":["**"],"$comment":"Claims every path: the default reader on any change. Because it matches everything, the unclaimed signal speaks only about the other scopes."},"security":{"persona":"feitan","tier":"deep","budget":1,"paths":[".github/workflows/**","ci_scripts/**","scripts/**","nen/contract.json","**/*auth*","**/*secret*","**/*credential*","**/*token*"],"$comment":"CI, the build/serve scripts, the lane declaration and anything credential-shaped."},"architecture":{"persona":"chrollo","tier":"deep","budget":1,"paths":["src/domain/**","gatsby-config.js","gatsby-browser.js","tests/**","nen/*.json"],"$comment":"The domain layer, the Gatsby configuration, the test pyramid and the declarations."},"ui":{"persona":"hisoka","tier":"fast","budget":2,"paths":["src/components/**","src/pages/**","src/styles.css","static/**"],"$comment":"Rendered surfaces, styles and the artwork assets the site shows."},"performance":{"persona":"uvogin","tier":"fast","budget":2,"paths":["scripts/build-offline.cjs","scripts/serve.cjs","**/*benchmark*","**/perf/**"],"$comment":"The offline bundle and the server, where payload and request count are decided."}}},
+  "mukai": {
+    "autoEn": false,
+    "$autoEn": "one of: true | false"
+  },
+  "classify": {
+    "publish": "label",
+    "$publish": "one of: label | label+comment"
+  },
+  "direct": {
+    "publish": "none",
+    "$publish": "one of: none | label | label+comment"
+  },
+  "port": {
+    "handbooksRepo": "zheref/bankai-handbooks",
+    "rulingsDir": "handbooks/ports",
+    "specKit": {
+      "pin": "v1.2.2",
+      "layout": "specs/{nnn}-{slug}"
+    }
+  },
+  "aiReviewers": "required",
+  "$aiReviewers": "one of: required | optional | off",
+  "profile": {
+    "allowed": [
+      "fast",
+      "standard",
+      "thorough"
+    ],
+    "$allowed": "any of: fast | standard | thorough"
+  },
+  "pr": {
+    "sections": {
+      "max": 7,
+      "variants": {
+        "product.build": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "verify",
+          "evidence"
+        ],
+        "product.fix": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "verify",
+          "evidence"
+        ],
+        "product.maintain": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "verify",
+          "rollout"
+        ],
+        "product.verify": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "verify",
+          "evidence"
+        ],
+        "product.canon": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "verify"
+        ],
+        "product.release": [
+          "changes",
+          "why",
+          "release-unit",
+          "rollout",
+          "verify",
+          "evidence"
+        ],
+        "library.build": [
+          "changes",
+          "why",
+          "how",
+          "compat",
+          "improves",
+          "verify"
+        ],
+        "library.fix": [
+          "changes",
+          "why",
+          "how",
+          "compat",
+          "improves",
+          "verify"
+        ],
+        "library.maintain": [
+          "changes",
+          "why",
+          "how",
+          "compat",
+          "improves",
+          "verify"
+        ],
+        "library.verify": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "verify"
+        ],
+        "library.canon": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "verify"
+        ],
+        "library.release": [
+          "changes",
+          "why",
+          "release-unit",
+          "compat",
+          "verify"
+        ],
+        "process.build": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "across",
+          "verify"
+        ],
+        "process.fix": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "across",
+          "verify"
+        ],
+        "process.maintain": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "across",
+          "verify"
+        ],
+        "process.verify": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "verify"
+        ],
+        "process.canon": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "across",
+          "verify"
+        ],
+        "process.release": [
+          "changes",
+          "why",
+          "release-unit",
+          "across",
+          "verify"
+        ],
+        "unknown.build": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "verify"
+        ],
+        "unknown.fix": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "verify"
+        ],
+        "unknown.maintain": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "verify"
+        ],
+        "unknown.verify": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "verify"
+        ],
+        "unknown.canon": [
+          "changes",
+          "why",
+          "how",
+          "improves",
+          "verify"
+        ],
+        "unknown.release": [
+          "changes",
+          "why",
+          "release-unit",
+          "verify"
+        ]
+      }
+    },
+    "$sections": "available sections: delivery — Always-first ledger-rendered delivery metadata; outside the seven-reader cap. | changes — Before/After for a named consumer; Case for/Case against; what would flip the decision. | why — Source/What it showed/Why it matters now, followed by the authoring nature. | how — Mermaid structure diagram and Item/Kind/Change legend; flow diagram only when behavior flow changed; one rejected alternative. | improves — All eleven aspects, marked ⬆ improves / ➖ unchanged / ⬇ regresses; justify only movement. | verify — Product: numbered steps. Library: Consumer scenario/Call or import/Expected, plus published artifact command. Process: Behavior changed/Lane or verb run/Refuses on/Passes on. Every kind adds one Criterion/Coverage/Evidence row per AC id of each closing issue (HR-11; scripts/pr_criteria_check.mts). content: an empty heading fails body-check through the derived verify-content requirement. | evidence — UZF-26 state/variant evidence table; only where project.evidence.globs is declared. | compat — Symbol/Before/After/Consumer action; semver verdict. | across — What another repository does differently after this merge; recorded rulings. | release-unit — Artifact/Size/Provenance; CON-22 fan-out. | rollout — Target/Flag/Rollback step. | economics — Leorio summary, then the full report in details; no new level-2 headings inside it. | checklist — Compact evidence-backed completion conditions. | issues — Canonical issue URL/scope/merging verdict table and closing lines; Development guard applies. | attribution — Final heading; exact participant ledger from docs/AGENT-ATTRIBUTION.md."
+  }
+}

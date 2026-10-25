@@ -1,0 +1,60 @@
+name: Hanten
+
+# The `hanten` review round as a check. nen/gates.json names `hanten` as the
+# base reviewer, and `nen pr ready` counts this job's SUCCESS as its round.
+# The job reads only the pull request BODY, which is where hatsu's shibari
+# pastes hanten's settled findings, so it re-runs on `edited`: settling a
+# finding is a body edit.
+#
+# Adapted at Hatsu adoption (2026-10-22) from a sibling consumer repository's
+# hanten workflow for a public repository on hosted runners (contents: read, no
+# persisted credentials). The gate script is read from the pull request's BASE,
+# so a branch cannot edit the gate that judges it; only while the base carries
+# no gate yet (the bootstrap PR itself) does the head's copy run, said in a
+# notice.
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened, ready_for_review]
+
+concurrency:
+  group: hanten-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  hanten:
+    name: hanten
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    # Same-repository guard: a fork PR's round stays unmet until the maintainer acts.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: .gate-base
+          persist-credentials: false
+          sparse-checkout: ci_scripts/hanten_gate.sh
+          sparse-checkout-cone-mode: false
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: .gate-head
+          persist-credentials: false
+          sparse-checkout: ci_scripts/hanten_gate.sh
+          sparse-checkout-cone-mode: false
+      - name: Check the hanten review is settled
+        # The body goes through the environment, never into the script text,
+        # so nothing in it can be executed.
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          gate=.gate-base/ci_scripts/hanten_gate.sh
+          if [ ! -f "${gate}" ]; then
+            echo "::notice::the base carries no hanten gate yet; running the head's copy"
+            gate=.gate-head/ci_scripts/hanten_gate.sh
+          fi
+          bash "${gate}"

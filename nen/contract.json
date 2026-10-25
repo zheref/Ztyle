@@ -1,0 +1,102 @@
+{
+  "$schema": "nen.contract/v0.1",
+  "project": {
+    "lanes": {
+      "gatsby": {
+        "stack": "gatsby",
+        "cwd": "."
+      }
+    },
+    "defaultLane": "gatsby",
+    "verbs": {
+      "gatsby": {
+        "build": {
+          "exe": "npm",
+          "argv": [
+            "run",
+            "build"
+          ],
+          "why": "The repository's own build script: `gatsby build && node scripts/build-offline.cjs`. The offline bundle step is part of what this repository ships, so the declaration runs the npm script rather than bare `gatsby build`. Owner's choice at adoption, 2026-10-22."
+        },
+        "test": {
+          "exe": "npm",
+          "argv": [
+            "run",
+            "test:report"
+          ],
+          "artifacts": [
+            ".nen/test-results/junit.xml",
+            ".nen/coverage/lcov.info"
+          ],
+          "why": "The repository's node:test suites (`node --test tests/*.test.cjs`, the same files `npm test` runs), through the `test:report` script so one run also writes a JUnit file `nen shu test-report` parses and an lcov capture byakugan reads with --from-capture. Three suites read the built `public/` art, so `build` runs before `test` (CI and the iteration loop both do). Set at Hatsu bootstrap, 2026-10-23."
+        },
+        "ui-test": {
+          "unsupported": "PROPOSED SEAT -- replace it. nen shu detect wrote this row because the reference pack proposes no command for 'ui-test' on gatsby; nen never invents one. The pack's own reason: No UI or E2E runner of any kind."
+        },
+        "lint": {
+          "unsupported": "PROPOSED SEAT -- replace it. nen shu detect wrote this row because the reference pack proposes no command for 'lint' on gatsby; nen never invents one. The pack's own reason: NO LINTER OF ANY KIND EXISTS IN THIS REPOSITORY."
+        },
+        "release": {
+          "unsupported": "PROPOSED SEAT -- replace it. nen shu detect wrote this row because the reference pack proposes no command for 'release' on gatsby; nen never invents one. The pack's own reason: No release lane of any kind."
+        },
+        "dev": {
+          "exe": "npm",
+          "argv": [
+            "run",
+            "develop"
+          ],
+          "why": "The repository's own develop script: `gatsby develop -H 0.0.0.0 -p 8000`."
+        },
+        "run": {
+          "exe": "npm",
+          "argv": [
+            "start"
+          ],
+          "why": "The repository's own start script: `node scripts/serve.cjs`, which serves the production build and so requires a prior `build`."
+        },
+        "coverage": {
+          "exe": "npm",
+          "argv": [
+            "run",
+            "test:report"
+          ],
+          "artifacts": [
+            ".nen/coverage/lcov.info"
+          ],
+          "why": "Node's built-in test coverage (`--experimental-test-coverage`, lcov reporter) over the same node:test run as `test` -- no extra dependency. Scope is the modules the suites require in-process: src/domain/*.cjs; scripts/serve.cjs runs as a spawned child and is not measured. Set at Hatsu bootstrap, 2026-10-23."
+        }
+      }
+    },
+    "hosts": {
+      "*": [
+        "darwin",
+        "linux",
+        "win32"
+      ]
+    },
+    "targets": {},
+    "kind": "product",
+    "$kind": "one of: product | process | library",
+    "toolchain": {
+      "node": {
+        "version": ">=22.0.0",
+        "probe": [
+          "node",
+          "--version"
+        ],
+        "versionFrom": "first-semver-on-stdout",
+        "installer": "verify-only",
+        "why": "Gatsby 5 declares engines.node >=18.0.0 <26, but the test verb sets the real floor: `test:report` uses the node:test lcov reporter (first in 20.11.0/21.2.0) and win32 relies on `node --test` expanding its own glob (21+), so 22 -- the version CI pins -- is declared. Verify-only: nen reports the host's node and never installs one."
+      }
+    },
+    "preconditions": {
+      "gatsby": [
+        {
+          "kind": "path",
+          "value": "node_modules",
+          "why": "Dependencies installed (`npm ci --legacy-peer-deps`, as README states). Nen asserts this and never installs them; CI installs them in its own step."
+        }
+      ]
+    }
+  }
+}

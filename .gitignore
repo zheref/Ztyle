@@ -7,3 +7,7 @@ public/
 .env.*
 !.env.example
 *.log
+# nen writes generated output here; committed configuration lives in nen/.
+.nen/
+# nen/workflow.json's reports.dir -- generated reports, never committed.
+Reports/

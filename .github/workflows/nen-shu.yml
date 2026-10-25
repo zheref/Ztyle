@@ -1,0 +1,85 @@
+# .github/workflows/nen-shu.yml -- written by `nen scaffold`.
+#
+# Every step below is `nen shu <verb>`, and every argv those verbs run comes
+# from THIS repository's own nen/contract.json. Nothing in this file names a
+# build tool, a package manager or a test runner, and nothing in it should:
+# to change what CI runs, change the declaration.
+name: nen shu
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# READ-ONLY BY DECLARATION. This workflow fetches a pinned nen release over
+# plain HTTPS and runs `nen shu` verbs against the checkout; it pushes nothing,
+# comments on nothing and opens nothing. Saying so here means a step that later
+# grew a write fails loudly instead of inheriting whatever this repository's
+# default token permission happens to be.
+permissions:
+  contents: read
+
+jobs:
+  shu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      # The one thing nen deliberately never does: install the project's own
+      # dependencies. nen/contract.json asserts node_modules as a precondition
+      # of the gatsby lane, so the runner performs it here, the way README says.
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+          cache: npm
+      - name: dependencies
+        run: npm ci --legacy-peer-deps --no-audit --no-fund
+
+      # Pinned by ref. Re-pinning this repository is this one value; the
+      # bootstrap verifies the binary it fetches against the release manifest.
+      - name: nen
+        env:
+          NEN_REF: v0.26.0
+        run: |
+          curl -fsSL "https://raw.githubusercontent.com/zheref/nen/${NEN_REF}/bootstrap/nen.sh" -o nen-bootstrap.sh
+          bin="$(bash nen-bootstrap.sh --ref "${NEN_REF}")"
+          [ -x "${bin}" ] || { echo "::error::nen bootstrap at ${NEN_REF} printed '${bin}', not an executable"; exit 1; }
+          echo "NEN=${bin}" >> "${GITHUB_ENV}"
+
+      # Read-only: reports what this runner has against what the declaration
+      # pins, and installs nothing. Exit 5 is "a pinned tool is missing" and
+      # fails the job. Exit 7 is "nen is behind dependency.pinned_ref": the
+      # NEN_REF above is older than the ref nen/contract.json pins -- drift in
+      # this file, not a broken runner -- so it is a warning and the job goes
+      # on. Every other non-zero code still fails.
+      - name: toolchain
+        run: |
+          set +e
+          "${NEN}" shu tools --repo .
+          status=$?
+          if [ "${status}" -eq 7 ]; then
+            echo "::warning title=nen behind pinned_ref::NEN_REF in this workflow is older than dependency.pinned_ref in nen/contract.json -- repin this file's NEN_REF."
+            exit 0
+          fi
+          exit "${status}"
+
+      # --dry-run FIRST on every verb. It prints the argv the declaration
+      # states and spawns nothing, so a declaration that drifted fails here
+      # rather than half-way through a real build.
+      - name: build / test / lint
+        run: |
+          set +e
+          for verb in build test lint; do
+            # The empty second form is deliberately unquoted: it must vanish.
+            for form in "--dry-run" ""; do
+              "${NEN}" shu "${verb}" --repo . ${form}
+              status=$?
+              [ "${status}" -eq 0 ] && continue
+              # 4 is "this lane declares no such verb" -- a fact about the
+              # repository, not a failure of the run.
+              [ "${status}" -eq 4 ] && { echo "shu ${verb}: not declared for this lane"; break; }
+              exit "${status}"
+            done
+          done
