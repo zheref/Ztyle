@@ -182,8 +182,8 @@ export default function PlannerCalendar({
             <p>
               <b>Your Drive matrix sets the character.</b> Each date uses its
               first, second, third, or fourth weekday occurrence. Weather and
-              gym mode change the outfit, never the inspiration. Fifth
-              occurrences stay open because the source has no assignment.
+              gym mode change the outfit, never the inspiration. Your added
+              calendar dates fill extra days; other fifth occurrences stay open.
             </p>
           </div>
           {repeats.length > 0 && (
@@ -314,7 +314,7 @@ export default function PlannerCalendar({
                 </span>
                 {look && (
                   <span className="assignment-state">
-                    {saved ? "Planned" : "Matrix default"} · Option{" "}
+                    {saved ? "Planned" : reference?.date ? "Your added date" : "Matrix default"} · Option{" "}
                     {look.option || 1}
                     {repeats.includes(date) ? " · Repeated character" : ""}
                   </span>

@@ -28,7 +28,23 @@
             ".nen/test-results/junit.xml",
             ".nen/coverage/lcov.info"
           ],
-          "why": "The repository's node:test suites (`node --test tests/*.test.cjs`, the same files `npm test` runs), through the `test:report` script so one run also writes a JUnit file `nen shu test-report` parses and an lcov capture byakugan reads with --from-capture. Three suites read the built `public/` art, so `build` runs before `test` (CI and the iteration loop both do). Set at Hatsu bootstrap, 2026-10-23."
+          "why": "The repository's node:test suites (`node --test tests/*.test.cjs`, the same files `npm test` runs), through the `test:report` script so one run also writes a JUnit file `nen shu test-report` parses and an lcov capture byakugan reads with --from-capture. Three suites read the built `public/` art, so `build` runs before `test` (CI and the iteration loop both do). Set at Hatsu bootstrap, 2026-10-23.",
+          "select": {
+            "exe": "node",
+            "argv": [
+              "--test",
+              "--test-reporter=junit",
+              "--test-reporter-destination=.nen/focused/junit.xml"
+            ],
+            "each": [
+              "{id}"
+            ],
+            "pattern": "^tests/[a-z0-9-]+\\.test\\.cjs$",
+            "results": {
+              "path": ".nen/focused/junit.xml",
+              "format": "junit"
+            }
+          }
         },
         "ui-test": {
           "unsupported": "PROPOSED SEAT -- replace it. nen shu detect wrote this row because the reference pack proposes no command for 'ui-test' on gatsby; nen never invents one. The pack's own reason: No UI or E2E runner of any kind."
@@ -55,15 +71,15 @@
           "why": "The repository's own start script: `node scripts/serve.cjs`, which serves the production build and so requires a prior `build`."
         },
         "coverage": {
-          "exe": "npm",
+          "exe": "node",
           "argv": [
-            "run",
-            "test:report"
+            "-e",
+            "require('node:fs').accessSync('.nen/coverage/lcov.info')"
           ],
           "artifacts": [
             ".nen/coverage/lcov.info"
           ],
-          "why": "Node's built-in test coverage (`--experimental-test-coverage`, lcov reporter) over the same node:test run as `test` -- no extra dependency. Scope is the modules the suites require in-process: src/domain/*.cjs; scripts/serve.cjs runs as a spawned child and is not measured. Set at Hatsu bootstrap, 2026-10-23."
+          "why": "Read the coverage artifact captured by the declared test run. Measurement never reruns tests; Nen verifies capture provenance with --from-capture."
         }
       }
     },
@@ -97,6 +113,12 @@
           "why": "Dependencies installed (`npm ci --legacy-peer-deps`, as README states). Nen asserts this and never installs them; CI installs them in its own step."
         }
       ]
+    },
+    "evidence": {
+      "globs": [
+        "reference/*complete.png"
+      ],
+      "mechanism": "files-changed"
     }
   }
 }
