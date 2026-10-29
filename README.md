@@ -50,3 +50,7 @@ Optional **Settings → Connect shared wardrobe** enables shared sync through `/
 - `scripts/serve.cjs`: static file server and optional JSON sync adapter. `public/` is a deployable static Gatsby build; static-only cloud deployment keeps local saving/export and requires a separate sync API for sharing.
 
 Run `npm test` for focused calendar, recommendation, swap, validation and shipped-art checks.
+
+## Repeatable calendar visual check
+
+`tests/visual/calendar.cua.mjs` exports `verifyOctoberCalendar(tab, capture)`. Run it in the Codex CUA REPL with a bound localhost tab and a callback that saves the screenshot. It navigates to October 2026, verifies all 27 new options and their loaded local images, checks each Signature full-resolution viewer, and captures the completed week. It never saves, swaps or replaces outfits. The observed result is `reference/october-calendar-visual-result.json`. This requires the Codex browser session; it is not an unattended CLI or CI UI-test lane.
