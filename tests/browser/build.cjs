@@ -1,0 +1,10 @@
+const fs = require('node:fs');
+const crypto = require('node:crypto');
+const {spawnSync} = require('node:child_process');
+for(const generated of ['.cache','public']) fs.rmSync(generated, {recursive:true,force:true});
+const sourceFiles = ['src/pages/index.js','src/components/PlannerCalendar.js'];
+fs.mkdirSync('.nen/browser',{recursive:true});
+fs.writeFileSync('.nen/browser/build.json',JSON.stringify({builtAt:new Date().toISOString(),sources:Object.fromEntries(sourceFiles.map(p=>[p,crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex')]))},null,2));
+const result = spawnSync(process.execPath, [require.resolve('gatsby/cli'), 'build'], {stdio:'inherit', env:{...process.env,ZTYLE_BROWSER_COVERAGE:'1',GATSBY_TELEMETRY_DISABLED:'1'}});
+if(result.status !== 0) process.exit(result.status || 1);
+console.log('Instrumented browser build ready. Serve this checkout on the isolated test origin.');

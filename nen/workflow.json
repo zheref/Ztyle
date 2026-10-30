@@ -37,7 +37,70 @@
     "template": "rikugan",
     "$template": "one of: spiritual-message | rikugan",
     "captures": "Reports/captures",
-    "sections": {"$comment":"Which blocks each report variant renders, read by nen report render --variant; with none declared the verb refuses every variant. Copied from zheref/hatsu's own declaration at adoption so both repositories render the same blocks in the same order. Block NAMES are configuration; every value inside a block is model-written.","turn":{"template":"spiritual-message","blocks":["masthead","tally","desk","lastTurn","landed","delta","evidence","launch","decisions"]},"turn-fast":{"template":"spiritual-message","blocks":["masthead","tally","desk","lastTurn"]},"landing":{"template":"spiritual-message","blocks":["masthead","tally","desk","lastTurn","landed","delta","evidence","spend","launch","decisions","prBody"]},"final":{"template":"rikugan","blocks":["masthead","tally","desk","register","spend","legend"]},"register":{"template":"rikugan","blocks":["masthead","tally","desk","register","spend","legend"]}}
+    "sections": {
+      "$comment": "Which blocks each report variant renders, read by nen report render --variant; with none declared the verb refuses every variant. Copied from zheref/hatsu's own declaration at adoption so both repositories render the same blocks in the same order. Block NAMES are configuration; every value inside a block is model-written.",
+      "turn": {
+        "template": "spiritual-message",
+        "blocks": [
+          "masthead",
+          "tally",
+          "desk",
+          "lastTurn",
+          "landed",
+          "delta",
+          "evidence",
+          "launch",
+          "decisions"
+        ]
+      },
+      "turn-fast": {
+        "template": "spiritual-message",
+        "blocks": [
+          "masthead",
+          "tally",
+          "desk",
+          "lastTurn"
+        ]
+      },
+      "landing": {
+        "template": "spiritual-message",
+        "blocks": [
+          "masthead",
+          "tally",
+          "desk",
+          "lastTurn",
+          "landed",
+          "delta",
+          "evidence",
+          "spend",
+          "launch",
+          "decisions",
+          "prBody"
+        ]
+      },
+      "final": {
+        "template": "rikugan",
+        "blocks": [
+          "masthead",
+          "tally",
+          "desk",
+          "register",
+          "spend",
+          "legend"
+        ]
+      },
+      "register": {
+        "template": "rikugan",
+        "blocks": [
+          "masthead",
+          "tally",
+          "desk",
+          "register",
+          "spend",
+          "legend"
+        ]
+      }
+    }
   },
   "notifications": {
     "$comment": "turn decides how loud an ORDINARY (no-gate) turn is: 'rung1' rings only the first rung 'rungs' lists, 'all' rings every rung 'rungs' lists on every turn -- a gate always rings everything 'rungs' lists regardless.",
@@ -56,7 +119,11 @@
     "allowedAttributionTrailers": [
       "Hatsu-Agent"
     ],
-    "forbiddenTrailers": [],
+    "forbiddenTrailers": [
+      "Co-Authored-By",
+      "Signed-off-by",
+      "Claude-Session"
+    ],
     "runTrailer": null
   },
   "monitor": {
@@ -93,7 +160,73 @@
       "orchestrator": "frontier"
     }
   },
-  "review": {"$comment":"Which reviewer hanten raises for a diff and how many times per effort. Paths use the prefix/glob grammar nen report data --tiers reads; a path no scope claims is reported unclaimed. Tiers name this file's own models rungs, never frontier. Product set chosen at adoption on 2026-10-22, modelled on zheref/hatsu's declaration and adapted to this Gatsby site's layout.","scopes":{"code":{"persona":"nobunaga","tier":"deep","budget":2,"paths":["**"],"$comment":"Claims every path: the default reader on any change. Because it matches everything, the unclaimed signal speaks only about the other scopes."},"security":{"persona":"feitan","tier":"deep","budget":1,"paths":[".github/workflows/**","ci_scripts/**","scripts/**","nen/contract.json","**/*auth*","**/*secret*","**/*credential*","**/*token*"],"$comment":"CI, the build/serve scripts, the lane declaration and anything credential-shaped."},"architecture":{"persona":"chrollo","tier":"deep","budget":1,"paths":["src/domain/**","gatsby-config.js","gatsby-browser.js","tests/**","nen/*.json"],"$comment":"The domain layer, the Gatsby configuration, the test pyramid and the declarations."},"ui":{"persona":"hisoka","tier":"fast","budget":2,"paths":["src/components/**","src/pages/**","src/styles.css","static/**"],"$comment":"Rendered surfaces, styles and the artwork assets the site shows."},"performance":{"persona":"uvogin","tier":"fast","budget":2,"paths":["scripts/build-offline.cjs","scripts/serve.cjs","**/*benchmark*","**/perf/**"],"$comment":"The offline bundle and the server, where payload and request count are decided."}}},
+  "review": {
+    "$comment": "Which reviewer hanten raises for a diff and how many times per effort. Paths use the prefix/glob grammar nen report data --tiers reads; a path no scope claims is reported unclaimed. Tiers name this file's own models rungs, never frontier. Product set chosen at adoption on 2026-10-22, modelled on zheref/hatsu's declaration and adapted to this Gatsby site's layout.",
+    "scopes": {
+      "code": {
+        "persona": "nobunaga",
+        "tier": "deep",
+        "budget": 2,
+        "paths": [
+          "**"
+        ],
+        "$comment": "Claims every path: the default reader on any change. Because it matches everything, the unclaimed signal speaks only about the other scopes."
+      },
+      "security": {
+        "persona": "feitan",
+        "tier": "deep",
+        "budget": 1,
+        "paths": [
+          ".github/workflows/**",
+          "ci_scripts/**",
+          "scripts/**",
+          "nen/contract.json",
+          "**/*auth*",
+          "**/*secret*",
+          "**/*credential*",
+          "**/*token*"
+        ],
+        "$comment": "CI, the build/serve scripts, the lane declaration and anything credential-shaped."
+      },
+      "architecture": {
+        "persona": "chrollo",
+        "tier": "deep",
+        "budget": 1,
+        "paths": [
+          "src/domain/**",
+          "gatsby-config.js",
+          "gatsby-browser.js",
+          "tests/**",
+          "nen/*.json"
+        ],
+        "$comment": "The domain layer, the Gatsby configuration, the test pyramid and the declarations."
+      },
+      "ui": {
+        "persona": "hisoka",
+        "tier": "fast",
+        "budget": 2,
+        "paths": [
+          "src/components/**",
+          "src/pages/**",
+          "src/styles.css",
+          "static/**"
+        ],
+        "$comment": "Rendered surfaces, styles and the artwork assets the site shows."
+      },
+      "performance": {
+        "persona": "uvogin",
+        "tier": "fast",
+        "budget": 2,
+        "paths": [
+          "scripts/build-offline.cjs",
+          "scripts/serve.cjs",
+          "**/*benchmark*",
+          "**/perf/**"
+        ],
+        "$comment": "The offline bundle and the server, where payload and request count are decided."
+      }
+    }
+  },
   "mukai": {
     "autoEn": false,
     "$autoEn": "one of: true | false"
