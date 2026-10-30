@@ -7,7 +7,7 @@
         "cwd": "."
       },
       "browser": {
-        "stack": "gatsby-browser",
+        "stack": "gatsby",
         "cwd": "."
       }
     },
