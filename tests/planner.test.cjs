@@ -104,7 +104,7 @@ test("dates use nth occurrence of a weekday rather than calendar row", () => {
     "Sung JinWoo (Solo Leveling)",
   );
   assert.equal(p.rotationForDate("2026-10-01").name, "Megumi (JJK)");
-  assert.equal(p.rotationForDate("2026-10-29"), undefined);
+  assert.equal(p.rotationForDate("2026-11-29"), undefined);
 });
 test("each of the 28 source inspirations has cold, warm and gym formulas", () => {
   const matrix = require("../src/domain/matrix.json");
@@ -121,15 +121,15 @@ test("monthly plans follow all 28 source slots without random repeats", () => {
   const dates = p.monthDates(new Date("2026-10-18T12:00:00"));
   for (const goal of ["warm", "cold", "gym"]) {
     const result = p.suggestWeek(dates, looks, [], goal);
-    assert.equal(Object.keys(result).length, 28);
+    assert.equal(Object.keys(result).length, 31);
     const assigned = Object.entries(result).map(([date, id]) => {
       const l = looks.find((l) => l.id === id);
       assert.equal(l.rotationId, p.rotationForDate(date).rotationId);
       assert.equal(l.variant, goal);
       return l.rotationId;
     });
-    assert.equal(new Set(assigned).size, 28);
-    assert.ok(!result["2026-10-29"]);
+    assert.equal(new Set(assigned).size, 31);
+    assert.ok(result["2026-10-29"].startsWith("itachi-"));
   }
 });
 test("the same day keeps its character in every calendar view and weather mode", () => {
@@ -162,5 +162,5 @@ test("moving a source inspiration to an extra date does not clone its default", 
     moved,
   );
   assert.equal(restored["2026-10-22"], "kirito-warm");
-  assert.equal(restored["2026-10-29"], undefined);
+  assert.equal(restored["2026-10-29"], "itachi-warm-1");
 });

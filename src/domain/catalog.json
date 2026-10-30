@@ -11697,5 +11697,1328 @@
     "tip": "Keep black dominant, use midnight navy on a separate piece, and reserve violet for a small accessory. Change the cut, not the character palette. Choose standard plain basics; any store logo should be small and tonal.",
     "artworkStyle": "annotated-flat-anime-172cm",
     "artworkGeneratedAt": "2026-10-20T15:45:05.131Z"
+  },
+  {
+    "id": "itachi-warm-1",
+    "rotationId": "addition-itachi",
+    "matrixLabel": "Itachi Uchiha (Naruto)",
+    "character": "Itachi Uchiha",
+    "series": "Naruto",
+    "variant": "warm",
+    "option": 1,
+    "optionLabel": "Original",
+    "name": "Itachi Uchiha · Original casual",
+    "image": "/art/itachi-warm-1-anime.webp",
+    "colors": [
+      "#202124",
+      "#a6333c",
+      "#b8bec7"
+    ],
+    "source": "matrix",
+    "sourcePalette": "Primary: black | Contrast: crimson red | Accent: silver",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain black short-sleeve cotton crewneck tee"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain crimson red relaxed chino shorts"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black low-top canvas sneakers"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple silver watch"
+      }
+    ],
+    "tip": "Akatsuki-inspired black and crimson, interpreted as plain everyday separates. Choose easy-to-find plain basics and small tonal branding only. Choose breathable cotton, an easy fit and standard sneakers for a 172 cm frame.",
+    "calendarDate": "2026-10-29",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:09:50.234Z"
+  },
+  {
+    "id": "itachi-warm-2",
+    "rotationId": "addition-itachi",
+    "matrixLabel": "Itachi Uchiha (Naruto)",
+    "character": "Itachi Uchiha",
+    "series": "Naruto",
+    "variant": "warm",
+    "option": 2,
+    "optionLabel": "Alternative",
+    "name": "Itachi Uchiha · Alternative casual",
+    "image": "/art/itachi-warm-2-anime.webp",
+    "colors": [
+      "#202124",
+      "#a6333c",
+      "#b8bec7"
+    ],
+    "source": "alternative",
+    "sourcePalette": "Primary: black | Contrast: crimson red | Accent: silver",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain crimson red short-sleeve camp shirt"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain black straight-leg lightweight cotton trousers"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain white low-top sneakers"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple silver watch"
+      }
+    ],
+    "tip": "Akatsuki-inspired black and crimson, interpreted as plain everyday separates. Choose easy-to-find plain basics and small tonal branding only. Choose breathable cotton, an easy fit and standard sneakers for a 172 cm frame.",
+    "calendarDate": "2026-10-29",
+    "alternativeOf": "itachi-warm-1",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:09:50.394Z"
+  },
+  {
+    "id": "itachi-warm-3",
+    "rotationId": "addition-itachi",
+    "matrixLabel": "Itachi Uchiha (Naruto)",
+    "character": "Itachi Uchiha",
+    "series": "Naruto",
+    "variant": "warm",
+    "option": 3,
+    "optionLabel": "Signature",
+    "name": "Itachi Uchiha · Signature casual",
+    "image": "/art/itachi-warm-3-anime.webp",
+    "colors": [
+      "#202124",
+      "#a6333c",
+      "#b8bec7"
+    ],
+    "source": "signature",
+    "sourcePalette": "Primary: black | Contrast: crimson red | Accent: silver",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain black short-sleeve cotton henley"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain crimson red above-knee utility shorts"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black canvas slip-on sneakers"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple silver watch"
+      }
+    ],
+    "tip": "Akatsuki-inspired black and crimson, interpreted as plain everyday separates. Choose easy-to-find plain basics and small tonal branding only. Choose breathable cotton, an easy fit and standard sneakers for a 172 cm frame.",
+    "calendarDate": "2026-10-29",
+    "alternativeOf": "itachi-warm-1",
+    "signatureColors": {
+      "primary": "black",
+      "contrast": "crimson red",
+      "accent": "silver",
+      "neutral": "black"
+    },
+    "annotations": [
+      "BLACK FIRST",
+      "CRIMSON RED CONTRAST",
+      "SILVER ACCENT",
+      "RELAXED FIT",
+      "BRANDING: SMALL TONAL MARKS ONLY",
+      "172 CM / EVERYDAY FIT"
+    ],
+    "imageFull": "/art/itachi-warm-3-anime-full.webp",
+    "artworkStyle": "annotated-flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:09:50.679Z"
+  },
+  {
+    "id": "itachi-cold-1",
+    "rotationId": "addition-itachi",
+    "matrixLabel": "Itachi Uchiha (Naruto)",
+    "character": "Itachi Uchiha",
+    "series": "Naruto",
+    "variant": "cold",
+    "option": 1,
+    "optionLabel": "Original",
+    "name": "Itachi Uchiha · Original layers",
+    "image": "/art/itachi-cold-1-anime.webp",
+    "colors": [
+      "#202124",
+      "#a6333c",
+      "#b8bec7"
+    ],
+    "source": "matrix",
+    "sourcePalette": "Primary: black | Contrast: crimson red | Accent: silver",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Outerwear",
+        "name": "Plain black hip-length zip hoodie, worn open"
+      },
+      {
+        "category": "Base",
+        "name": "Plain crimson red cotton crewneck tee"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain black relaxed straight-leg jeans"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black casual sneakers"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple silver watch"
+      }
+    ],
+    "tip": "Akatsuki-inspired black and crimson, interpreted as plain everyday separates. Choose easy-to-find plain basics and small tonal branding only. Keep the outer layer at hip length; relaxed straight legs balance a 172 cm frame.",
+    "calendarDate": "2026-10-29",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:09:50.839Z"
+  },
+  {
+    "id": "itachi-cold-2",
+    "rotationId": "addition-itachi",
+    "matrixLabel": "Itachi Uchiha (Naruto)",
+    "character": "Itachi Uchiha",
+    "series": "Naruto",
+    "variant": "cold",
+    "option": 2,
+    "optionLabel": "Alternative",
+    "name": "Itachi Uchiha · Alternative layers",
+    "image": "/art/itachi-cold-2-anime.webp",
+    "colors": [
+      "#202124",
+      "#a6333c",
+      "#b8bec7"
+    ],
+    "source": "alternative",
+    "sourcePalette": "Primary: black | Contrast: crimson red | Accent: silver",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Outerwear",
+        "name": "Plain crimson red hip-length fleece overshirt, worn open"
+      },
+      {
+        "category": "Base",
+        "name": "Plain black cotton long-sleeve tee"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain charcoal relaxed carpenter trousers"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black casual lace-up boots"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple silver watch"
+      }
+    ],
+    "tip": "Akatsuki-inspired black and crimson, interpreted as plain everyday separates. Choose easy-to-find plain basics and small tonal branding only. Keep the outer layer at hip length; relaxed straight legs balance a 172 cm frame.",
+    "calendarDate": "2026-10-29",
+    "alternativeOf": "itachi-cold-1",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:09:51.015Z"
+  },
+  {
+    "id": "itachi-cold-3",
+    "rotationId": "addition-itachi",
+    "matrixLabel": "Itachi Uchiha (Naruto)",
+    "character": "Itachi Uchiha",
+    "series": "Naruto",
+    "variant": "cold",
+    "option": 3,
+    "optionLabel": "Signature",
+    "name": "Itachi Uchiha · Signature layers",
+    "image": "/art/itachi-cold-3-anime.webp",
+    "colors": [
+      "#202124",
+      "#a6333c",
+      "#b8bec7"
+    ],
+    "source": "signature",
+    "sourcePalette": "Primary: black | Contrast: crimson red | Accent: silver",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Outerwear",
+        "name": "Plain black hip-length denim trucker jacket, worn open"
+      },
+      {
+        "category": "Base",
+        "name": "Plain crimson red crewneck sweatshirt"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain black straight-leg cotton cargo trousers"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black casual lace-up boots"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple silver watch"
+      }
+    ],
+    "tip": "Akatsuki-inspired black and crimson, interpreted as plain everyday separates. Choose easy-to-find plain basics and small tonal branding only. Keep the outer layer at hip length; relaxed straight legs balance a 172 cm frame.",
+    "calendarDate": "2026-10-29",
+    "alternativeOf": "itachi-cold-1",
+    "signatureColors": {
+      "primary": "black",
+      "contrast": "crimson red",
+      "accent": "silver",
+      "neutral": "black"
+    },
+    "annotations": [
+      "BLACK FIRST",
+      "CRIMSON RED CONTRAST",
+      "SILVER ACCENT",
+      "HIP-LENGTH LAYERS",
+      "BRANDING: SMALL TONAL MARKS ONLY",
+      "172 CM / EVERYDAY FIT"
+    ],
+    "imageFull": "/art/itachi-cold-3-anime-full.webp",
+    "artworkStyle": "annotated-flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:09:51.323Z"
+  },
+  {
+    "id": "itachi-gym-1",
+    "rotationId": "addition-itachi",
+    "matrixLabel": "Itachi Uchiha (Naruto)",
+    "character": "Itachi Uchiha",
+    "series": "Naruto",
+    "variant": "gym",
+    "option": 1,
+    "optionLabel": "Original",
+    "name": "Itachi Uchiha · Original training",
+    "image": "/art/itachi-gym-1-anime.webp",
+    "colors": [
+      "#202124",
+      "#a6333c",
+      "#b8bec7"
+    ],
+    "source": "matrix",
+    "sourcePalette": "Primary: black | Contrast: crimson red | Accent: silver",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain black short-sleeve athletic tee"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain crimson red seven-inch training shorts"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black training shoes"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple silver sports watch"
+      }
+    ],
+    "tip": "Akatsuki-inspired black and crimson, interpreted as plain everyday separates. Choose easy-to-find plain basics and small tonal branding only. Use breathable stretch fabric and supportive training shoes; the watch provides the accent.",
+    "calendarDate": "2026-10-29",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:09:51.492Z"
+  },
+  {
+    "id": "itachi-gym-2",
+    "rotationId": "addition-itachi",
+    "matrixLabel": "Itachi Uchiha (Naruto)",
+    "character": "Itachi Uchiha",
+    "series": "Naruto",
+    "variant": "gym",
+    "option": 2,
+    "optionLabel": "Alternative",
+    "name": "Itachi Uchiha · Alternative training",
+    "image": "/art/itachi-gym-2-anime.webp",
+    "colors": [
+      "#202124",
+      "#a6333c",
+      "#b8bec7"
+    ],
+    "source": "alternative",
+    "sourcePalette": "Primary: black | Contrast: crimson red | Accent: silver",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain crimson red sleeveless athletic tank"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain black seven-inch training shorts"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain white training shoes"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple silver sports watch"
+      }
+    ],
+    "tip": "Akatsuki-inspired black and crimson, interpreted as plain everyday separates. Choose easy-to-find plain basics and small tonal branding only. Use breathable stretch fabric and supportive training shoes; the watch provides the accent.",
+    "calendarDate": "2026-10-29",
+    "alternativeOf": "itachi-gym-1",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:09:51.654Z"
+  },
+  {
+    "id": "itachi-gym-3",
+    "rotationId": "addition-itachi",
+    "matrixLabel": "Itachi Uchiha (Naruto)",
+    "character": "Itachi Uchiha",
+    "series": "Naruto",
+    "variant": "gym",
+    "option": 3,
+    "optionLabel": "Signature",
+    "name": "Itachi Uchiha · Signature training",
+    "image": "/art/itachi-gym-3-anime.webp",
+    "colors": [
+      "#202124",
+      "#a6333c",
+      "#b8bec7"
+    ],
+    "source": "signature",
+    "sourcePalette": "Primary: black | Contrast: crimson red | Accent: silver",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain black lightweight long-sleeve performance top"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain crimson red seven-inch training shorts"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black training shoes"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple silver sports watch"
+      }
+    ],
+    "tip": "Akatsuki-inspired black and crimson, interpreted as plain everyday separates. Choose easy-to-find plain basics and small tonal branding only. Use breathable stretch fabric and supportive training shoes; the watch provides the accent.",
+    "calendarDate": "2026-10-29",
+    "alternativeOf": "itachi-gym-1",
+    "signatureColors": {
+      "primary": "black",
+      "contrast": "crimson red",
+      "accent": "silver",
+      "neutral": "black"
+    },
+    "annotations": [
+      "BLACK FIRST",
+      "CRIMSON RED CONTRAST",
+      "SILVER ACCENT",
+      "FREE MOVEMENT",
+      "BRANDING: SMALL TONAL MARKS ONLY",
+      "172 CM / EVERYDAY FIT"
+    ],
+    "imageFull": "/art/itachi-gym-3-anime-full.webp",
+    "artworkStyle": "annotated-flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:09:51.949Z"
+  },
+  {
+    "id": "david-warm-1",
+    "rotationId": "addition-david",
+    "matrixLabel": "David Martinez (Cyberpunk: Edgerunners)",
+    "character": "David Martinez",
+    "series": "Cyberpunk: Edgerunners",
+    "variant": "warm",
+    "option": 1,
+    "optionLabel": "Original",
+    "name": "David Martinez · Original casual",
+    "image": "/art/david-warm-1-anime.webp",
+    "colors": [
+      "#e8bd27",
+      "#202124",
+      "#25adca"
+    ],
+    "source": "matrix",
+    "sourcePalette": "Primary: yellow | Contrast: black | Accent: cyan blue",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain yellow boxy short-sleeve cotton tee"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain black relaxed chino shorts"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain white low-top sneakers"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple cyan blue watch"
+      }
+    ],
+    "tip": "David’s yellow jacket and black base translated into plain yellow and black basics; cyan stays on a small accessory. Choose easy-to-find plain basics and small tonal branding only. Choose breathable cotton, an easy fit and standard sneakers for a 172 cm frame.",
+    "calendarDate": "2026-10-30",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:12:17.139Z"
+  },
+  {
+    "id": "david-warm-2",
+    "rotationId": "addition-david",
+    "matrixLabel": "David Martinez (Cyberpunk: Edgerunners)",
+    "character": "David Martinez",
+    "series": "Cyberpunk: Edgerunners",
+    "variant": "warm",
+    "option": 2,
+    "optionLabel": "Alternative",
+    "name": "David Martinez · Alternative casual",
+    "image": "/art/david-warm-2-anime.webp",
+    "colors": [
+      "#e8bd27",
+      "#202124",
+      "#25adca"
+    ],
+    "source": "alternative",
+    "sourcePalette": "Primary: yellow | Contrast: black | Accent: cyan blue",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain black short-sleeve cotton crewneck tee"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain yellow above-knee cotton utility shorts"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black canvas sneakers"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple cyan blue watch"
+      }
+    ],
+    "tip": "David’s yellow jacket and black base translated into plain yellow and black basics; cyan stays on a small accessory. Choose easy-to-find plain basics and small tonal branding only. Choose breathable cotton, an easy fit and standard sneakers for a 172 cm frame.",
+    "calendarDate": "2026-10-30",
+    "alternativeOf": "david-warm-1",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:12:17.295Z"
+  },
+  {
+    "id": "david-warm-3",
+    "rotationId": "addition-david",
+    "matrixLabel": "David Martinez (Cyberpunk: Edgerunners)",
+    "character": "David Martinez",
+    "series": "Cyberpunk: Edgerunners",
+    "variant": "warm",
+    "option": 3,
+    "optionLabel": "Signature",
+    "name": "David Martinez · Signature casual",
+    "image": "/art/david-warm-3-anime.webp",
+    "colors": [
+      "#e8bd27",
+      "#202124",
+      "#25adca"
+    ],
+    "source": "signature",
+    "sourcePalette": "Primary: yellow | Contrast: black | Accent: cyan blue",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain yellow short-sleeve linen camp shirt"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain black relaxed lightweight cotton trousers"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain white canvas slip-on sneakers"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple cyan blue watch"
+      }
+    ],
+    "tip": "David’s yellow jacket and black base translated into plain yellow and black basics; cyan stays on a small accessory. Choose easy-to-find plain basics and small tonal branding only. Choose breathable cotton, an easy fit and standard sneakers for a 172 cm frame.",
+    "calendarDate": "2026-10-30",
+    "alternativeOf": "david-warm-1",
+    "signatureColors": {
+      "primary": "yellow",
+      "contrast": "black",
+      "accent": "cyan blue",
+      "neutral": "black"
+    },
+    "annotations": [
+      "YELLOW FIRST",
+      "BLACK CONTRAST",
+      "CYAN BLUE ACCENT",
+      "RELAXED FIT",
+      "BRANDING: SMALL TONAL MARKS ONLY",
+      "172 CM / EVERYDAY FIT"
+    ],
+    "imageFull": "/art/david-warm-3-anime-full.webp",
+    "artworkStyle": "annotated-flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:12:17.587Z"
+  },
+  {
+    "id": "david-cold-1",
+    "rotationId": "addition-david",
+    "matrixLabel": "David Martinez (Cyberpunk: Edgerunners)",
+    "character": "David Martinez",
+    "series": "Cyberpunk: Edgerunners",
+    "variant": "cold",
+    "option": 1,
+    "optionLabel": "Original",
+    "name": "David Martinez · Original layers",
+    "image": "/art/david-cold-1-anime.webp",
+    "colors": [
+      "#e8bd27",
+      "#202124",
+      "#25adca"
+    ],
+    "source": "matrix",
+    "sourcePalette": "Primary: yellow | Contrast: black | Accent: cyan blue",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Outerwear",
+        "name": "Plain yellow hip-length bomber jacket, worn open"
+      },
+      {
+        "category": "Base",
+        "name": "Plain black cotton crewneck tee"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain black straight-leg jeans"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain white casual sneakers"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple cyan blue watch"
+      }
+    ],
+    "tip": "David’s yellow jacket and black base translated into plain yellow and black basics; cyan stays on a small accessory. Choose easy-to-find plain basics and small tonal branding only. Keep the outer layer at hip length; relaxed straight legs balance a 172 cm frame.",
+    "calendarDate": "2026-10-30",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:12:17.748Z"
+  },
+  {
+    "id": "david-cold-2",
+    "rotationId": "addition-david",
+    "matrixLabel": "David Martinez (Cyberpunk: Edgerunners)",
+    "character": "David Martinez",
+    "series": "Cyberpunk: Edgerunners",
+    "variant": "cold",
+    "option": 2,
+    "optionLabel": "Alternative",
+    "name": "David Martinez · Alternative layers",
+    "image": "/art/david-cold-2-anime.webp",
+    "colors": [
+      "#e8bd27",
+      "#202124",
+      "#25adca"
+    ],
+    "source": "alternative",
+    "sourcePalette": "Primary: yellow | Contrast: black | Accent: cyan blue",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Outerwear",
+        "name": "Plain black hip-length cotton zip hoodie, worn open"
+      },
+      {
+        "category": "Base",
+        "name": "Plain yellow crewneck sweatshirt"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain charcoal relaxed cargo trousers"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black casual sneakers"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple cyan blue watch"
+      }
+    ],
+    "tip": "David’s yellow jacket and black base translated into plain yellow and black basics; cyan stays on a small accessory. Choose easy-to-find plain basics and small tonal branding only. Keep the outer layer at hip length; relaxed straight legs balance a 172 cm frame.",
+    "calendarDate": "2026-10-30",
+    "alternativeOf": "david-cold-1",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:13:12.701Z"
+  },
+  {
+    "id": "david-cold-3",
+    "rotationId": "addition-david",
+    "matrixLabel": "David Martinez (Cyberpunk: Edgerunners)",
+    "character": "David Martinez",
+    "series": "Cyberpunk: Edgerunners",
+    "variant": "cold",
+    "option": 3,
+    "optionLabel": "Signature",
+    "name": "David Martinez · Signature layers",
+    "image": "/art/david-cold-3-anime.webp",
+    "colors": [
+      "#e8bd27",
+      "#202124",
+      "#25adca"
+    ],
+    "source": "signature",
+    "sourcePalette": "Primary: yellow | Contrast: black | Accent: cyan blue",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Outerwear",
+        "name": "Plain yellow hip-length canvas chore jacket, worn open"
+      },
+      {
+        "category": "Base",
+        "name": "Plain black cotton long-sleeve tee"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain black relaxed carpenter trousers"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black casual lace-up boots"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple cyan blue watch"
+      }
+    ],
+    "tip": "David’s yellow jacket and black base translated into plain yellow and black basics; cyan stays on a small accessory. Choose easy-to-find plain basics and small tonal branding only. Keep the outer layer at hip length; relaxed straight legs balance a 172 cm frame.",
+    "calendarDate": "2026-10-30",
+    "alternativeOf": "david-cold-1",
+    "signatureColors": {
+      "primary": "yellow",
+      "contrast": "black",
+      "accent": "cyan blue",
+      "neutral": "black"
+    },
+    "annotations": [
+      "YELLOW FIRST",
+      "BLACK CONTRAST",
+      "CYAN BLUE ACCENT",
+      "HIP-LENGTH LAYERS",
+      "BRANDING: SMALL TONAL MARKS ONLY",
+      "172 CM / EVERYDAY FIT"
+    ],
+    "imageFull": "/art/david-cold-3-anime-full.webp",
+    "artworkStyle": "annotated-flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:13:12.961Z"
+  },
+  {
+    "id": "david-gym-1",
+    "rotationId": "addition-david",
+    "matrixLabel": "David Martinez (Cyberpunk: Edgerunners)",
+    "character": "David Martinez",
+    "series": "Cyberpunk: Edgerunners",
+    "variant": "gym",
+    "option": 1,
+    "optionLabel": "Original",
+    "name": "David Martinez · Original training",
+    "image": "/art/david-gym-1-anime.webp",
+    "colors": [
+      "#e8bd27",
+      "#202124",
+      "#25adca"
+    ],
+    "source": "matrix",
+    "sourcePalette": "Primary: yellow | Contrast: black | Accent: cyan blue",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain yellow short-sleeve athletic tee"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain black seven-inch training shorts"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain white training shoes"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple cyan blue sports watch"
+      }
+    ],
+    "tip": "David’s yellow jacket and black base translated into plain yellow and black basics; cyan stays on a small accessory. Choose easy-to-find plain basics and small tonal branding only. Use breathable stretch fabric and supportive training shoes; the watch provides the accent.",
+    "calendarDate": "2026-10-30",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:13:13.109Z"
+  },
+  {
+    "id": "david-gym-2",
+    "rotationId": "addition-david",
+    "matrixLabel": "David Martinez (Cyberpunk: Edgerunners)",
+    "character": "David Martinez",
+    "series": "Cyberpunk: Edgerunners",
+    "variant": "gym",
+    "option": 2,
+    "optionLabel": "Alternative",
+    "name": "David Martinez · Alternative training",
+    "image": "/art/david-gym-2-anime.webp",
+    "colors": [
+      "#e8bd27",
+      "#202124",
+      "#25adca"
+    ],
+    "source": "alternative",
+    "sourcePalette": "Primary: yellow | Contrast: black | Accent: cyan blue",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain black sleeveless athletic tank"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain yellow seven-inch training shorts"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black training shoes"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple cyan blue sports watch"
+      }
+    ],
+    "tip": "David’s yellow jacket and black base translated into plain yellow and black basics; cyan stays on a small accessory. Choose easy-to-find plain basics and small tonal branding only. Use breathable stretch fabric and supportive training shoes; the watch provides the accent.",
+    "calendarDate": "2026-10-30",
+    "alternativeOf": "david-gym-1",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:13:36.723Z"
+  },
+  {
+    "id": "david-gym-3",
+    "rotationId": "addition-david",
+    "matrixLabel": "David Martinez (Cyberpunk: Edgerunners)",
+    "character": "David Martinez",
+    "series": "Cyberpunk: Edgerunners",
+    "variant": "gym",
+    "option": 3,
+    "optionLabel": "Signature",
+    "name": "David Martinez · Signature training",
+    "image": "/art/david-gym-3-anime.webp",
+    "colors": [
+      "#e8bd27",
+      "#202124",
+      "#25adca"
+    ],
+    "source": "signature",
+    "sourcePalette": "Primary: yellow | Contrast: black | Accent: cyan blue",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain yellow lightweight long-sleeve performance top"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain black seven-inch training shorts"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain white training shoes"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple cyan blue sports watch"
+      }
+    ],
+    "tip": "David’s yellow jacket and black base translated into plain yellow and black basics; cyan stays on a small accessory. Choose easy-to-find plain basics and small tonal branding only. Use breathable stretch fabric and supportive training shoes; the watch provides the accent.",
+    "calendarDate": "2026-10-30",
+    "alternativeOf": "david-gym-1",
+    "signatureColors": {
+      "primary": "yellow",
+      "contrast": "black",
+      "accent": "cyan blue",
+      "neutral": "black"
+    },
+    "annotations": [
+      "YELLOW FIRST",
+      "BLACK CONTRAST",
+      "CYAN BLUE ACCENT",
+      "FREE MOVEMENT",
+      "BRANDING: SMALL TONAL MARKS ONLY",
+      "172 CM / EVERYDAY FIT"
+    ],
+    "imageFull": "/art/david-gym-3-anime-full.webp",
+    "artworkStyle": "annotated-flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:13:37.008Z"
+  },
+  {
+    "id": "soshiro-warm-1",
+    "rotationId": "addition-soshiro",
+    "matrixLabel": "Soshiro Hoshina (Kaiju No. 8)",
+    "character": "Soshiro Hoshina",
+    "series": "Kaiju No. 8",
+    "variant": "warm",
+    "option": 1,
+    "optionLabel": "Original",
+    "name": "Soshiro Hoshina · Original casual",
+    "image": "/art/soshiro-warm-1-anime.webp",
+    "colors": [
+      "#202124",
+      "#526044",
+      "#8b78b4"
+    ],
+    "source": "matrix",
+    "sourcePalette": "Primary: black | Contrast: olive green | Accent: violet",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain black short-sleeve cotton crewneck tee"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain olive green relaxed utility shorts"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black canvas sneakers"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple violet watch"
+      }
+    ],
+    "tip": "Defense Force-inspired black and muted olive, with violet as a restrained personal accent. Casual clothing, no uniform armor. Choose easy-to-find plain basics and small tonal branding only. Choose breathable cotton, an easy fit and standard sneakers for a 172 cm frame.",
+    "calendarDate": "2026-10-31",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:12:17.942Z"
+  },
+  {
+    "id": "soshiro-warm-2",
+    "rotationId": "addition-soshiro",
+    "matrixLabel": "Soshiro Hoshina (Kaiju No. 8)",
+    "character": "Soshiro Hoshina",
+    "series": "Kaiju No. 8",
+    "variant": "warm",
+    "option": 2,
+    "optionLabel": "Alternative",
+    "name": "Soshiro Hoshina · Alternative casual",
+    "image": "/art/soshiro-warm-2-anime.webp",
+    "colors": [
+      "#202124",
+      "#526044",
+      "#8b78b4"
+    ],
+    "source": "alternative",
+    "sourcePalette": "Primary: black | Contrast: olive green | Accent: violet",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain olive green short-sleeve cotton camp shirt"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain black relaxed lightweight trousers"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain white canvas sneakers"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple violet watch"
+      }
+    ],
+    "tip": "Defense Force-inspired black and muted olive, with violet as a restrained personal accent. Casual clothing, no uniform armor. Choose easy-to-find plain basics and small tonal branding only. Choose breathable cotton, an easy fit and standard sneakers for a 172 cm frame.",
+    "calendarDate": "2026-10-31",
+    "alternativeOf": "soshiro-warm-1",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:12:18.107Z"
+  },
+  {
+    "id": "soshiro-warm-3",
+    "rotationId": "addition-soshiro",
+    "matrixLabel": "Soshiro Hoshina (Kaiju No. 8)",
+    "character": "Soshiro Hoshina",
+    "series": "Kaiju No. 8",
+    "variant": "warm",
+    "option": 3,
+    "optionLabel": "Signature",
+    "name": "Soshiro Hoshina · Signature casual",
+    "image": "/art/soshiro-warm-3-anime.webp",
+    "colors": [
+      "#202124",
+      "#526044",
+      "#8b78b4"
+    ],
+    "source": "signature",
+    "sourcePalette": "Primary: black | Contrast: olive green | Accent: violet",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain black short-sleeve cotton henley"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain olive green above-knee chino shorts"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black canvas slip-on sneakers"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple violet watch"
+      }
+    ],
+    "tip": "Defense Force-inspired black and muted olive, with violet as a restrained personal accent. Casual clothing, no uniform armor. Choose easy-to-find plain basics and small tonal branding only. Choose breathable cotton, an easy fit and standard sneakers for a 172 cm frame.",
+    "calendarDate": "2026-10-31",
+    "alternativeOf": "soshiro-warm-1",
+    "signatureColors": {
+      "primary": "black",
+      "contrast": "olive green",
+      "accent": "violet",
+      "neutral": "black"
+    },
+    "annotations": [
+      "BLACK FIRST",
+      "OLIVE GREEN CONTRAST",
+      "VIOLET ACCENT",
+      "RELAXED FIT",
+      "BRANDING: SMALL TONAL MARKS ONLY",
+      "172 CM / EVERYDAY FIT"
+    ],
+    "imageFull": "/art/soshiro-warm-3-anime-full.webp",
+    "artworkStyle": "annotated-flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:12:18.408Z"
+  },
+  {
+    "id": "soshiro-cold-1",
+    "rotationId": "addition-soshiro",
+    "matrixLabel": "Soshiro Hoshina (Kaiju No. 8)",
+    "character": "Soshiro Hoshina",
+    "series": "Kaiju No. 8",
+    "variant": "cold",
+    "option": 1,
+    "optionLabel": "Original",
+    "name": "Soshiro Hoshina · Original layers",
+    "image": "/art/soshiro-cold-1-anime.webp",
+    "colors": [
+      "#202124",
+      "#526044",
+      "#8b78b4"
+    ],
+    "source": "matrix",
+    "sourcePalette": "Primary: black | Contrast: olive green | Accent: violet",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Outerwear",
+        "name": "Plain black hip-length cotton zip hoodie, worn open"
+      },
+      {
+        "category": "Base",
+        "name": "Plain olive green cotton crewneck tee"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain black straight-leg cargo trousers"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black casual sneakers"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple violet watch"
+      }
+    ],
+    "tip": "Defense Force-inspired black and muted olive, with violet as a restrained personal accent. Casual clothing, no uniform armor. Choose easy-to-find plain basics and small tonal branding only. Keep the outer layer at hip length; relaxed straight legs balance a 172 cm frame.",
+    "calendarDate": "2026-10-31",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:12:18.568Z"
+  },
+  {
+    "id": "soshiro-cold-2",
+    "rotationId": "addition-soshiro",
+    "matrixLabel": "Soshiro Hoshina (Kaiju No. 8)",
+    "character": "Soshiro Hoshina",
+    "series": "Kaiju No. 8",
+    "variant": "cold",
+    "option": 2,
+    "optionLabel": "Alternative",
+    "name": "Soshiro Hoshina · Alternative layers",
+    "image": "/art/soshiro-cold-2-anime.webp",
+    "colors": [
+      "#202124",
+      "#526044",
+      "#8b78b4"
+    ],
+    "source": "alternative",
+    "sourcePalette": "Primary: black | Contrast: olive green | Accent: violet",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Outerwear",
+        "name": "Plain olive green hip-length fleece overshirt, worn open"
+      },
+      {
+        "category": "Base",
+        "name": "Plain black crewneck sweatshirt"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain charcoal relaxed jeans"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black casual lace-up boots"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple violet watch"
+      }
+    ],
+    "tip": "Defense Force-inspired black and muted olive, with violet as a restrained personal accent. Casual clothing, no uniform armor. Choose easy-to-find plain basics and small tonal branding only. Keep the outer layer at hip length; relaxed straight legs balance a 172 cm frame.",
+    "calendarDate": "2026-10-31",
+    "alternativeOf": "soshiro-cold-1",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:12:18.752Z"
+  },
+  {
+    "id": "soshiro-cold-3",
+    "rotationId": "addition-soshiro",
+    "matrixLabel": "Soshiro Hoshina (Kaiju No. 8)",
+    "character": "Soshiro Hoshina",
+    "series": "Kaiju No. 8",
+    "variant": "cold",
+    "option": 3,
+    "optionLabel": "Signature",
+    "name": "Soshiro Hoshina · Signature layers",
+    "image": "/art/soshiro-cold-3-anime.webp",
+    "colors": [
+      "#202124",
+      "#526044",
+      "#8b78b4"
+    ],
+    "source": "signature",
+    "sourcePalette": "Primary: black | Contrast: olive green | Accent: violet",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Outerwear",
+        "name": "Plain black hip-length canvas chore jacket, worn open"
+      },
+      {
+        "category": "Base",
+        "name": "Plain olive green long-sleeve cotton tee"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain black relaxed carpenter trousers"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black casual lace-up boots"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple violet watch"
+      }
+    ],
+    "tip": "Defense Force-inspired black and muted olive, with violet as a restrained personal accent. Casual clothing, no uniform armor. Choose easy-to-find plain basics and small tonal branding only. Keep the outer layer at hip length; relaxed straight legs balance a 172 cm frame.",
+    "calendarDate": "2026-10-31",
+    "alternativeOf": "soshiro-cold-1",
+    "signatureColors": {
+      "primary": "black",
+      "contrast": "olive green",
+      "accent": "violet",
+      "neutral": "black"
+    },
+    "annotations": [
+      "BLACK FIRST",
+      "OLIVE GREEN CONTRAST",
+      "VIOLET ACCENT",
+      "HIP-LENGTH LAYERS",
+      "BRANDING: SMALL TONAL MARKS ONLY",
+      "172 CM / EVERYDAY FIT"
+    ],
+    "imageFull": "/art/soshiro-cold-3-anime-full.webp",
+    "artworkStyle": "annotated-flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:13:13.410Z"
+  },
+  {
+    "id": "soshiro-gym-1",
+    "rotationId": "addition-soshiro",
+    "matrixLabel": "Soshiro Hoshina (Kaiju No. 8)",
+    "character": "Soshiro Hoshina",
+    "series": "Kaiju No. 8",
+    "variant": "gym",
+    "option": 1,
+    "optionLabel": "Original",
+    "name": "Soshiro Hoshina · Original training",
+    "image": "/art/soshiro-gym-1-anime.webp",
+    "colors": [
+      "#202124",
+      "#526044",
+      "#8b78b4"
+    ],
+    "source": "matrix",
+    "sourcePalette": "Primary: black | Contrast: olive green | Accent: violet",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain black short-sleeve athletic tee"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain olive green seven-inch training shorts"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black training shoes"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple violet sports watch"
+      }
+    ],
+    "tip": "Defense Force-inspired black and muted olive, with violet as a restrained personal accent. Casual clothing, no uniform armor. Choose easy-to-find plain basics and small tonal branding only. Use breathable stretch fabric and supportive training shoes; the watch provides the accent.",
+    "calendarDate": "2026-10-31",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:13:13.565Z"
+  },
+  {
+    "id": "soshiro-gym-2",
+    "rotationId": "addition-soshiro",
+    "matrixLabel": "Soshiro Hoshina (Kaiju No. 8)",
+    "character": "Soshiro Hoshina",
+    "series": "Kaiju No. 8",
+    "variant": "gym",
+    "option": 2,
+    "optionLabel": "Alternative",
+    "name": "Soshiro Hoshina · Alternative training",
+    "image": "/art/soshiro-gym-2-anime.webp",
+    "colors": [
+      "#202124",
+      "#526044",
+      "#8b78b4"
+    ],
+    "source": "alternative",
+    "sourcePalette": "Primary: black | Contrast: olive green | Accent: violet",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain olive green sleeveless athletic tank"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain black seven-inch training shorts"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain white training shoes"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple violet sports watch"
+      }
+    ],
+    "tip": "Defense Force-inspired black and muted olive, with violet as a restrained personal accent. Casual clothing, no uniform armor. Choose easy-to-find plain basics and small tonal branding only. Use breathable stretch fabric and supportive training shoes; the watch provides the accent.",
+    "calendarDate": "2026-10-31",
+    "alternativeOf": "soshiro-gym-1",
+    "artworkStyle": "flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:13:50.023Z"
+  },
+  {
+    "id": "soshiro-gym-3",
+    "rotationId": "addition-soshiro",
+    "matrixLabel": "Soshiro Hoshina (Kaiju No. 8)",
+    "character": "Soshiro Hoshina",
+    "series": "Kaiju No. 8",
+    "variant": "gym",
+    "option": 3,
+    "optionLabel": "Signature",
+    "name": "Soshiro Hoshina · Signature training",
+    "image": "/art/soshiro-gym-3-anime.webp",
+    "colors": [
+      "#202124",
+      "#526044",
+      "#8b78b4"
+    ],
+    "source": "signature",
+    "sourcePalette": "Primary: black | Contrast: olive green | Accent: violet",
+    "sourceOutfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "pieces": [
+      {
+        "category": "Top",
+        "name": "Plain black lightweight long-sleeve performance top"
+      },
+      {
+        "category": "Bottoms",
+        "name": "Plain olive green seven-inch training shorts"
+      },
+      {
+        "category": "Footwear",
+        "name": "Plain black training shoes"
+      },
+      {
+        "category": "Accent",
+        "name": "Simple violet sports watch"
+      }
+    ],
+    "tip": "Defense Force-inspired black and muted olive, with violet as a restrained personal accent. Casual clothing, no uniform armor. Choose easy-to-find plain basics and small tonal branding only. Use breathable stretch fabric and supportive training shoes; the watch provides the accent.",
+    "calendarDate": "2026-10-31",
+    "alternativeOf": "soshiro-gym-1",
+    "signatureColors": {
+      "primary": "black",
+      "contrast": "olive green",
+      "accent": "violet",
+      "neutral": "black"
+    },
+    "annotations": [
+      "BLACK FIRST",
+      "OLIVE GREEN CONTRAST",
+      "VIOLET ACCENT",
+      "FREE MOVEMENT",
+      "BRANDING: SMALL TONAL MARKS ONLY",
+      "172 CM / EVERYDAY FIT"
+    ],
+    "imageFull": "/art/soshiro-gym-3-anime-full.webp",
+    "artworkStyle": "annotated-flat-anime-172cm",
+    "artworkGeneratedAt": "2026-10-29T13:13:50.320Z"
   }
 ]

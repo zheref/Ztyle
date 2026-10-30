@@ -56,7 +56,11 @@ function outfitOptions(looks, look, variant = look.variant) {
 }
 // The first/second/third/fourth occurrence of each weekday is defined by the source matrix.
 const matrix = require("./matrix.json");
+const calendarAdditions = require("./calendar-additions.json");
 function rotationForDate(date, rows = matrix) {
+  // Explicit user choices fill individual dates without changing the Drive rotation.
+  const addition = rows === matrix && calendarAdditions.find((row) => row.date === date);
+  if (addition) return addition;
   const d = new Date(date + "T12:00:00");
   const day = [
     "Sunday",
