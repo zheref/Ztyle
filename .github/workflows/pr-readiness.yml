@@ -219,7 +219,7 @@ jobs:
         id: pin
         env:
           TENKAI_PIN_FALLBACK_ALLOWED: true
-          TENKAI_FALLBACK_REF: v0.26.0
+          TENKAI_FALLBACK_REF: v0.28.0
         shell: bash
         run: |
           set -euo pipefail

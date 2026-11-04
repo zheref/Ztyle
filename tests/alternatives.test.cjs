@@ -29,7 +29,7 @@ test("planning original, alternative, signature or mixed options preserves sourc
   const dates = p.monthDates(new Date("2026-10-18T12:00:00"));
   for (const pref of ["original", "alternative", "signature", "mix"]) {
     const plan = p.suggestWeek(dates, catalog, [], "gym", 22, {}, pref);
-    assert.equal(Object.keys(plan).length, 28);
+    assert.equal(Object.keys(plan).length, 31);
     for (const [date, id] of Object.entries(plan)) {
       const l = catalog.find((l) => l.id === id);
       assert.equal(l.rotationId, p.rotationForDate(date).rotationId);

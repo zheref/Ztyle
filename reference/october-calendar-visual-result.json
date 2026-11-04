@@ -1,0 +1,20 @@
+{
+  "test": "tests/visual/calendar.cua.mjs",
+  "runner": "Codex CUA browser APIs",
+  "result": "passed",
+  "checked": 27,
+  "dates": [
+    "2026-10-29",
+    "2026-10-30",
+    "2026-10-31"
+  ],
+  "assertions": [
+    "All warm/cold/gym Original/Alternative/Signature image paths load",
+    "All outfit formulas visible",
+    "All three gym Signature guides use full-resolution images",
+    "Read labels and Fit controls work"
+  ],
+  "screenshot": "reference/october-29-31-complete.png",
+  "source": "localhost:8000; product source equals the recovered branch; workflow-only differences do not change UI",
+  "recordedAt": "2026-10-29T18:21:40.553542+00:00"
+}

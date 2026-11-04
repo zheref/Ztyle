@@ -20,6 +20,8 @@ XDG_CONFIG_HOME=/tmp/ztyle-config GATSBY_TELEMETRY_DISABLED=1 npm run build
 
 ## Included
 
+- October 29–31, 2026 have explicit user-selected inspirations: Itachi Uchiha, David Martinez, and Soshiro Hoshina, respectively. Each has warm, cold and gym variants with Original, Alternative and annotated Signature options (27 new looks, 279 total). These date-specific additions live in `src/domain/calendar-additions.json`; they do not change the original Drive matrix or repeat automatically in later months. Saved manual selections take precedence. Add or rearrange future dated inspirations in this JSON using stable `rotationId` links to the catalog. The prompt set is `reference/october-additions-artwork-jobs.json`; generated assets live in `static/art` and include full-resolution Signature guides.
+
 - All 28 inspiration slots from the original Drive matrix, with 252 illustrated cold/warm/gym outfits: Original, Alternative, and Signature options for each source slot and variant. Signature (Option 3) follows the source primary/contrast/accent colors and embeds garment labels, palette legends, fit notes, and branding guidance within the art. The 84 alternatives change necklines, silhouettes, layers, and solid-color combinations while keeping the source inspiration. Artwork is generated in forward calendar order starting October 18, 2026; original illustrations are preserved.
 - Day, week and month calendar views, matching period navigation, a full month grid, detailed single-day formulas, and a remembered view preference. Drag-to-swap and touch/keyboard swaps remain available.
 - Each look has an Original/Alternative/Signature selector. Switching weather variants retains the selected option. The planner’s Outfits control offers Original, Alternative, Signature, or a deterministic Mix across all three options by date; saved assignments retain their exact outfit ID.
@@ -48,3 +50,17 @@ Optional **Settings → Connect shared wardrobe** enables shared sync through `/
 - `scripts/serve.cjs`: static file server and optional JSON sync adapter. `public/` is a deployable static Gatsby build; static-only cloud deployment keeps local saving/export and requires a separate sync API for sharing.
 
 Run `npm test` for focused calendar, recommendation, swap, validation and shipped-art checks.
+
+## Repeatable calendar visual check
+
+`tests/visual/calendar.cua.mjs` exports `verifyOctoberCalendar(tab, capture)`. Run it in the Codex CUA REPL with a bound localhost tab and a callback that saves the screenshot. It navigates to October 2026, verifies all 27 new options and their loaded local images, checks each Signature full-resolution viewer, and captures the completed week. It never saves, swaps or replaces outfits. The observed result is `reference/october-calendar-visual-result.json`. This requires the Codex browser session; it is not an unattended CLI or CI UI-test lane.
+
+## Browser and script coverage
+
+`npm run test:report` captures Node tests, JUnit and LCOV, including the artwork preparation script, Gatsby instrumentation hooks, and the generated trusted trailer publisher. Publisher tests use isolated subprocess fixtures with synthetic tokens; they make no network calls. The pinned reader fixture matches the SHA256 declared by the generated publisher.
+
+For React coverage, run `npm run build:coverage` and serve that build on a fresh **test origin** (`PORT=8001 npm start`, or another unused port to avoid a previous service-worker cache). This opt-in build instruments only `src/pages/index.js` and `src/components/PlannerCalendar.js`. It seeds synthetic wardrobe data and mocks weather, geolocation and shared storage. Never use it on the normal wardrobe origin. Ordinary `npm run build` omits both instrumentation and test controls; the production command runs `gatsby clean` first to remove prior QA output.
+
+In the Codex CUA REPL, import `tests/visual/calendar.cua.mjs` and `tests/browser/scenarios.cua.mjs`. Run the calendar check, then `plannerFlows`, `catalogFlows`, `weatherAndSyncFlows`, `backupAndUploadFlows`, `syncWriteFlows`, and `keyboardAndEmptyFlows`. The upload flow accepts `imagePath` (a synthetic screenshot) and `invalidBackupPath` (a file containing invalid JSON). Each returns case names only after its assertions pass. Start from fresh test-origin storage; these scenarios intentionally edit synthetic data. Capture the visible **Capture browser coverage** report to `.nen/browser/capture-1.json`, close it, reload and verify cached state, then capture again as `capture-2.json`. Save the successful case names as `.nen/browser/run.json` with `buildId` equal to the build manifest's `builtAt`, `result: "passed"`, and `cases: [...]`.
+
+`npm run coverage:browser` verifies source/build hashes, merges captures and emits LCOV and JUnit under `.nen/browser/report`. `nen shu test --lane browser` verifies these **previously executed CUA results**; it does not launch a browser or represent unattended CI execution. `nen shu coverage --lane browser --touched --base origin/main --from-capture` measures the resulting artifact. The default CI lane remains the automated Node suite and normal Gatsby build. Browser replay requires a Codex CUA session.

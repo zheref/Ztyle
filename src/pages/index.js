@@ -35,6 +35,7 @@ import {
 } from "lucide-react";
 import baseLooks from "../domain/catalog.json";
 import matrix from "../domain/matrix.json";
+import calendarAdditions from "../domain/calendar-additions.json";
 import PlannerCalendar from "../components/PlannerCalendar";
 import ArtworkViewer from "../components/ArtworkViewer";
 import planner from "../domain/planner.cjs";
@@ -1161,11 +1162,11 @@ export default function Home() {
                   </button>
                 </div>
                 <p className="muted">
-                  Your original 4-week inspiration rotation. Turn any reference
-                  into a new casual look.
+                  Your original 4-week inspiration rotation and your added calendar dates.
+                  Turn any reference into a new casual look.
                 </p>
                 <div className="matrix-grid">
-                  {matrix.map((m, i) => (
+                  {[...matrix, ...calendarAdditions].map((m, i) => (
                     <button
                       key={i}
                       className="matrix-item"
@@ -1175,7 +1176,7 @@ export default function Home() {
                       }}
                     >
                       <span>
-                        W{m.week} · {m.day}
+                        {m.date || `W${m.week} · ${m.day}`}
                       </span>
                       <b>{m.name}</b>
                       <ArrowUpRight size={16} />
@@ -1652,7 +1653,7 @@ export default function Home() {
       {modal === "matrix" && (
         <Dialog title="Character reference" onClose={() => setModal(null)}>
           <div className="eyebrow">
-            WEEK {remotePending.current.week} / {remotePending.current.day}
+            {remotePending.current.date || `WEEK ${remotePending.current.week} / ${remotePending.current.day}`}
           </div>
           <h2>{remotePending.current.name}</h2>
           <h3>Character inspiration</h3>

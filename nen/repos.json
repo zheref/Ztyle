@@ -21,7 +21,7 @@
     {
       "repo": "zheref/nen",
       "role": "Shared deterministic machinery",
-      "pinned": "v0.26.0"
+      "pinned": "v0.28.0"
     },
     {
       "repo": "zheref/bankai-handbooks",

@@ -41,7 +41,7 @@ jobs:
       # bootstrap verifies the binary it fetches against the release manifest.
       - name: nen
         env:
-          NEN_REF: v0.26.0
+          NEN_REF: v0.28.0
         run: |
           curl -fsSL "https://raw.githubusercontent.com/zheref/nen/${NEN_REF}/bootstrap/nen.sh" -o nen-bootstrap.sh
           bin="$(bash nen-bootstrap.sh --ref "${NEN_REF}")"

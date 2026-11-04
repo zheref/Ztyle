@@ -56,11 +56,11 @@ test("signature selections survive backups, and custom full-size image/notes fie
 });
 test("signature outfits preserve the source palette and lead with its primary color", () => {
   const signatures = catalog.filter((l) => l.option === 3);
-  assert.equal(signatures.length, 84);
+  assert.equal(signatures.length, 93);
   for (const l of signatures) {
     assert.equal(
       l.sourcePalette,
-      matrix.find((r) => r.rotationId === l.rotationId).palette,
+      [...matrix, ...require("../src/domain/calendar-additions.json")].find((r) => r.rotationId === l.rotationId).palette,
     );
     assert.ok(
       l.pieces[0].name.toLowerCase().includes(l.signatureColors.primary),

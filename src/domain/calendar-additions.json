@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2026-10-29",
+    "rotationId": "addition-itachi",
+    "name": "Itachi Uchiha (Naruto)",
+    "snapshot": "Akatsuki-inspired black and crimson, interpreted as plain everyday separates.",
+    "palette": "Primary: black | Contrast: crimson red | Accent: silver",
+    "outfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "tip": "Keep layers at hip length for a 172 cm frame. Use color across separate pieces, with small tonal branding only.",
+    "source": "user-request",
+    "referenceUrl": "https://naruto-official.com/en/news/01_1814"
+  },
+  {
+    "date": "2026-10-30",
+    "rotationId": "addition-david",
+    "name": "David Martinez (Cyberpunk: Edgerunners)",
+    "snapshot": "David’s yellow jacket and black base translated into plain yellow and black basics; cyan stays on a small accessory.",
+    "palette": "Primary: yellow | Contrast: black | Accent: cyan blue",
+    "outfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "tip": "Keep layers at hip length for a 172 cm frame. Use color across separate pieces, with small tonal branding only.",
+    "source": "user-request",
+    "referenceUrl": "https://blog.playstation.com/2022/09/06/the-edgerunners-update-brings-together-cyberpunk-2077-and-cyberpunk-edgerunners/"
+  },
+  {
+    "date": "2026-10-31",
+    "rotationId": "addition-soshiro",
+    "name": "Soshiro Hoshina (Kaiju No. 8)",
+    "snapshot": "Defense Force-inspired black and muted olive, with violet as a restrained personal accent. Casual clothing, no uniform armor.",
+    "palette": "Primary: black | Contrast: olive green | Accent: violet",
+    "outfit": "Three casual formulas per warm, cold and gym variant; each garment a single solid color.",
+    "tip": "Keep layers at hip length for a 172 cm frame. Use color across separate pieces, with small tonal branding only.",
+    "source": "user-request",
+    "referenceUrl": "https://kaiju-no8.net/news/detail_230324_01.html"
+  }
+]
