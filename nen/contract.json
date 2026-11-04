@@ -12,6 +12,12 @@
       }
     },
     "defaultLane": "gatsby",
+    "launch": {
+      "web": {
+        "verb": "dev",
+        "lane": "gatsby"
+      }
+    },
     "verbs": {
       "gatsby": {
         "build": {

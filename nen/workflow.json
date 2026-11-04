@@ -24,7 +24,7 @@
     "scope": "touched"
   },
   "launch": {
-    "default": null,
+    "default": "web",
     "fallback": null
   },
   "deploy": {
