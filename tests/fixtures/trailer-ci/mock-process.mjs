@@ -10,6 +10,8 @@ export function spawnSync(exe,args,options={}) {
   if(scenario==='publish-failure' && args.includes('PATCH'))return {...result,status:1};
   const out={id:7,name:body.name||'forbidden-commit-trailers',head_sha:process.env.HEAD_SHA,app:{slug:'github-actions'},external_id:process.env.GITHUB_WORKFLOW_REF+':1:1',details_url:'https://github.com/fixture/wardrobe/actions/runs/1/attempts/1',status:body.status,conclusion:body.conclusion};
   if(scenario==='identity')out.app.slug='untrusted';
+  // GitHub does not keep the details_url an Actions token requests: it answers the check's own page.
+  if(scenario==='rewritten-details')out.details_url='https://github.com/fixture/wardrobe/runs/'+out.id;
   if(scenario==='conclusion' && args.includes('PATCH'))out.conclusion='neutral';
   fs.appendFileSync(process.env.TEST_TRAILER_LOG,JSON.stringify(body)+'\n');
   result.stdout=JSON.stringify(out);
