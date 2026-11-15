@@ -30,10 +30,13 @@ on:
 permissions:
   contents: read
 
-# One deployment at a time. A newer push waits for the one in flight instead
-# of cancelling it: a half-finished Pages deployment is worse than a late one.
+# One run at a time PER REF. A newer push to main waits for the one in flight
+# instead of cancelling it: a half-finished Pages deployment is worse than a
+# late one. The ref is in the group because a group holds one running and one
+# pending run: a hand-run on another branch, which never deploys, would
+# otherwise displace a pending main publication.
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
