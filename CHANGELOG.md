@@ -4,7 +4,7 @@ All notable changes to Ztyle are recorded here. `nen changelog collate` anchors 
 
 ### Unreleased
 
-- Re-render the trailer-policy check from current Hatsu so it accepts the check run it creates and completes it; it failed on every pull request before.
+- Re-render the trailer-policy check from current Hatsu so it accepts the check run it creates and completes it, and names the failing commits' short SHAs in the check text; it failed on every pull request before.
 - Fill October 29–31 with Itachi, David, and Soshiro: 27 illustrated outfits across warm/cold/gym and three options, including annotated Signature guides.
 - Add explicit dated inspirations without changing the Drive rotation; declare focused planner tests, screenshot evidence and extraction-only coverage for Hatsu delivery.
 
