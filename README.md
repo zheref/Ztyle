@@ -20,15 +20,19 @@ XDG_CONFIG_HOME=/tmp/ztyle-config GATSBY_TELEMETRY_DISABLED=1 npm run build
 
 ## Hosted
 
-The static build is published to GitHub Pages at https://ztyle.zheref.io by `.github/workflows/pages.yml`: every push to `main` builds with `npm run build` and deploys `public/`; the workflow can also be run by hand from the Actions tab to re-publish the current `main`.
+The static build is published to GitHub Pages at https://ztyle.zheref.io by `.github/workflows/pages.yml`: every push to `main` builds with `npm run build` and deploys `public/`. The workflow can also be run by hand from the Actions tab; only a run on `main` publishes. The build has no path prefix, so it is only correct at the root of that domain: the default `zheref.github.io/Ztyle/` address is not a supported URL.
 
-Three things live outside the repository and are set once:
+Five things live outside the repository. Set them in this order, **before the first merge that carries the workflow** (a run on `main` with Pages not yet enabled fails; re-run it from the Actions tab afterwards):
 
-- **Settings → Pages → Source** is *GitHub Actions*.
-- **Settings → Pages → Custom domain** is `ztyle.zheref.io`. The domain is a repository setting, not a `CNAME` file: an Actions-built Pages site ignores a committed `CNAME`, and one under `static/` would be precached by the service worker.
-- **DNS** for `zheref.io` has a `CNAME` record `ztyle` → `zheref.github.io`.
+1. **Account Settings → Pages → Verified domains** lists `zheref.io`. A verified domain is what stops another GitHub account claiming `ztyle.zheref.io` while the DNS record points at GitHub and no site holds the name.
+2. **Settings → Pages → Source** is *GitHub Actions*.
+3. **Settings → Pages → Custom domain** is `ztyle.zheref.io`, with **Enforce HTTPS** ticked once the certificate is issued. The service worker and geolocation need HTTPS, and an HTTP copy would keep its own `localStorage`. The domain is a repository setting, not a `CNAME` file: an Actions-built Pages site ignores a committed `CNAME`, and one under `static/` would be precached by the service worker.
+4. **Settings → Environments → github-pages → Deployment branches** is *Selected branches*, `main` only. The workflow's deploy job also refuses any other ref.
+5. **DNS** for `zheref.io` has a `CNAME` record `ztyle` → `zheref.github.io`. Remove it if Pages is ever turned off: a record pointing at GitHub with no site behind it is the takeover case step 1 guards.
 
-The hosted copy is static. Wardrobe changes stay in each browser's `localStorage`, export/import and offline reload work, and live weather works. **Settings → Connect shared wardrobe** does not: it needs `/api/state`, which only `npm start` serves, and it says so when tried.
+The hosted copy is static. Wardrobe changes stay in each browser's `localStorage`, and export/import and offline reload work. Live weather works, and on a public HTTPS origin it works for any visitor: the browser's coordinates, or the city typed in Settings, are sent to open-meteo.com. **Settings → Connect shared wardrobe** does not work: it needs `/api/state`, which only `npm start` serves, and it says so when tried.
+
+The deploy is a GitHub Actions workflow, not a `nen shu` verb: `nen/contract.json` still declares no `release` or deploy row, and the workflow's build line is a hand copy of the contract's `build` argv.
 
 ## Included
 

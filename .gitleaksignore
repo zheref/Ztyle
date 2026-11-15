@@ -1,0 +1,3 @@
+# gitleaks false positives, one fingerprint per line.
+# generic-api-key on `const KEY = "ztyle-wardrobe-v1"`: a localStorage key name, not a credential.
+0270573f19d331cef32e944253d03f5bb3d7938c:src/pages/index.js:generic-api-key:52

@@ -4,12 +4,19 @@
 # file and not in a CNAME file: with an Actions-built Pages site the custom
 # domain is a repository setting (Settings -> Pages -> Custom domain), and a
 # committed CNAME is ignored. It also has to stay out of `static/`, because
-# scripts/build-offline.cjs precaches every file under `public/`.
+# scripts/build-offline.cjs precaches nearly every file under `public/`
+# (everything but source maps, .jpg and the service worker itself).
 #
-# What is published is exactly what `npm run build` writes to `public/` -- the
-# same argv nen/contract.json declares as the gatsby lane's `build`. Pages is
-# static hosting: scripts/serve.cjs does not run there, so the optional shared
-# wardrobe (`/api/state`) is unavailable and local saving/export still works.
+# What is published is what `npm run build` writes to `public/`. That line is
+# a HAND COPY of the argv nen/contract.json declares as the gatsby lane's
+# `build`, not a read of it: change one and change the other. This workflow
+# deliberately does not fetch the nen bootstrap, so the job whose artifact is
+# published runs nothing but the repository's own install and build.
+#
+# Pages is static hosting: scripts/serve.cjs does not run there, so the
+# optional shared wardrobe (`/api/state`) is unavailable and local saving and
+# export still work. The build has no path prefix, so it is only correct at
+# the root of the custom domain, never under <owner>.github.io/<repo>/.
 name: pages
 
 on:
@@ -38,8 +45,8 @@ jobs:
         with:
           persist-credentials: false
 
-      # Same runtime and install line as nen-shu.yml, so the build that is
-      # published is the build CI already proved on the pull request.
+      # Same runtime and install line as nen-shu.yml. This job does not wait
+      # for that workflow: on a push to main the two run side by side.
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 22
@@ -56,6 +63,10 @@ jobs:
 
   deploy:
     needs: build
+    # A hand-run can start from any branch, and a branch carries its own copy
+    # of this file. Only main publishes; the `github-pages` environment's
+    # deployment-branch rule (README, Hosted) is the second lock.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     # Only this job may publish, and it runs no code from the checkout: it
