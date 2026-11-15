@@ -18,6 +18,18 @@ If a restricted environment prevents Gatsby writing its config outside the proje
 XDG_CONFIG_HOME=/tmp/ztyle-config GATSBY_TELEMETRY_DISABLED=1 npm run build
 ```
 
+## Hosted
+
+The static build is published to GitHub Pages at https://ztyle.zheref.io by `.github/workflows/pages.yml`: every push to `main` builds with `npm run build` and deploys `public/`; the workflow can also be run by hand from the Actions tab to re-publish the current `main`.
+
+Three things live outside the repository and are set once:
+
+- **Settings → Pages → Source** is *GitHub Actions*.
+- **Settings → Pages → Custom domain** is `ztyle.zheref.io`. The domain is a repository setting, not a `CNAME` file: an Actions-built Pages site ignores a committed `CNAME`, and one under `static/` would be precached by the service worker.
+- **DNS** for `zheref.io` has a `CNAME` record `ztyle` → `zheref.github.io`.
+
+The hosted copy is static. Wardrobe changes stay in each browser's `localStorage`, export/import and offline reload work, and live weather works. **Settings → Connect shared wardrobe** does not: it needs `/api/state`, which only `npm start` serves, and it says so when tried.
+
 ## Included
 
 - October 29–31, 2026 have explicit user-selected inspirations: Itachi Uchiha, David Martinez, and Soshiro Hoshina, respectively. Each has warm, cold and gym variants with Original, Alternative and annotated Signature options (27 new looks, 279 total). These date-specific additions live in `src/domain/calendar-additions.json`; they do not change the original Drive matrix or repeat automatically in later months. Saved manual selections take precedence. Add or rearrange future dated inspirations in this JSON using stable `rotationId` links to the catalog. The prompt set is `reference/october-additions-artwork-jobs.json`; generated assets live in `static/art` and include full-resolution Signature guides.

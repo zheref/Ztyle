@@ -4,6 +4,7 @@ All notable changes to Ztyle are recorded here. `nen changelog collate` anchors 
 
 ### Unreleased
 
+- Publish the static build to GitHub Pages at https://ztyle.zheref.io: a `pages` workflow builds and deploys `public/` on every push to `main`, and on demand.
 - Fill October 29–31 with Itachi, David, and Soshiro: 27 illustrated outfits across warm/cold/gym and three options, including annotated Signature guides.
 - Add explicit dated inspirations without changing the Drive rotation; declare focused planner tests, screenshot evidence and extraction-only coverage for Hatsu delivery.
 

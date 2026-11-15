@@ -1,0 +1,71 @@
+# .github/workflows/pages.yml -- publishes the static Gatsby build to GitHub Pages.
+#
+# The site is served at https://ztyle.zheref.io. That address is NOT in this
+# file and not in a CNAME file: with an Actions-built Pages site the custom
+# domain is a repository setting (Settings -> Pages -> Custom domain), and a
+# committed CNAME is ignored. It also has to stay out of `static/`, because
+# scripts/build-offline.cjs precaches every file under `public/`.
+#
+# What is published is exactly what `npm run build` writes to `public/` -- the
+# same argv nen/contract.json declares as the gatsby lane's `build`. Pages is
+# static hosting: scripts/serve.cjs does not run there, so the optional shared
+# wardrobe (`/api/state`) is unavailable and local saving/export still works.
+name: pages
+
+on:
+  push:
+    branches: [main]
+  # Re-publish the current main by hand, without a new commit.
+  workflow_dispatch:
+
+# The default token reads the checkout and nothing else. The one job that
+# publishes widens this for itself, below.
+permissions:
+  contents: read
+
+# One deployment at a time. A newer push waits for the one in flight instead
+# of cancelling it: a half-finished Pages deployment is worse than a late one.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      # Same runtime and install line as nen-shu.yml, so the build that is
+      # published is the build CI already proved on the pull request.
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+          cache: npm
+      - name: dependencies
+        run: npm ci --legacy-peer-deps --no-audit --no-fund
+
+      - name: build
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # Only this job may publish, and it runs no code from the checkout: it
+    # hands the artifact the build job uploaded to the Pages service.
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
