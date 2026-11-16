@@ -1,0 +1,5 @@
+# gitleaks false positives, one fingerprint per line.
+# 1: the generic-api-key rule on the localStorage key name in src/pages/index.js; not a credential.
+# 2: the same rule on an earlier comment in this file that quoted that name.
+0270573f19d331cef32e944253d03f5bb3d7938c:src/pages/index.js:generic-api-key:52
+0cadebc6717b4387eb5a97c4793b2de8c9c898d0:.gitleaksignore:generic-api-key:2

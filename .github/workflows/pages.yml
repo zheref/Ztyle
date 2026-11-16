@@ -1,0 +1,85 @@
+# .github/workflows/pages.yml -- publishes the static Gatsby build to GitHub Pages.
+#
+# The site is served at https://ztyle.zheref.io. That address is NOT in this
+# file and not in a CNAME file: with an Actions-built Pages site the custom
+# domain is a repository setting (Settings -> Pages -> Custom domain), and a
+# committed CNAME is ignored. It also has to stay out of `static/`, because
+# scripts/build-offline.cjs precaches nearly every file under `public/`
+# (everything but source maps, .jpg and the service worker itself).
+#
+# What is published is what `npm run build` writes to `public/`. That line is
+# a HAND COPY of the argv nen/contract.json declares as the gatsby lane's
+# `build`, not a read of it: change one and change the other. This workflow
+# deliberately does not fetch the nen bootstrap, so the job whose artifact is
+# published runs nothing but the repository's own install and build.
+#
+# Pages is static hosting: scripts/serve.cjs does not run there, so the
+# optional shared wardrobe (`/api/state`) is unavailable and local saving and
+# export still work. The build has no path prefix, so it is only correct at
+# the root of the custom domain, never under <owner>.github.io/<repo>/.
+name: pages
+
+on:
+  push:
+    branches: [main]
+  # Re-publish the current main by hand, without a new commit.
+  workflow_dispatch:
+
+# The default token reads the checkout and nothing else. The one job that
+# publishes widens this for itself, below.
+permissions:
+  contents: read
+
+# One run at a time PER REF. A newer push to main waits for the one in flight
+# instead of cancelling it: a half-finished Pages deployment is worse than a
+# late one. The ref is in the group because a group holds one running and one
+# pending run: a hand-run on another branch, which never deploys, would
+# otherwise displace a pending main publication.
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      # Same runtime and install line as nen-shu.yml. This job does not wait
+      # for that workflow: on a push to main the two run side by side.
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+          cache: npm
+      - name: dependencies
+        run: npm ci --legacy-peer-deps --no-audit --no-fund
+
+      - name: build
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    # A hand-run can start from any branch, and a branch carries its own copy
+    # of this file. Only main publishes; the `github-pages` environment's
+    # deployment-branch rule (README, Hosted) is the second lock.
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # Only this job may publish, and it runs no code from the checkout: it
+    # hands the artifact the build job uploaded to the Pages service.
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
